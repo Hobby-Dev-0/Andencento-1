@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "Andencento_cmd"
+          find: "userbot.plugins.sql_helper"
 
-          replace: "andencento_cmd"
+          replace: "sql"
 
       - name: Create Pull Request
 
