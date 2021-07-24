@@ -4,8 +4,8 @@ from telethon import events
 from telethon.tl.functions.channels import EditAdminRequest
 from telethon.tl.types import ChatAdminRights
 
-from userbot.sql import gmute_sql as gsql
-from userbot.sql.gban_sql import all_gbanned, gbaner, is_gbanned, ungbaner
+from sql import gmute_sql as gsql
+from sql.gban_sql import all_gbanned, gbaner, is_gbanned, ungbaner
 
 from . import *
 

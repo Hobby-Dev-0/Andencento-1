@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String
 
-from userbot.sql import BASE, SESSION
+from sql import BASE, SESSION
 
 
 class Users(BASE):

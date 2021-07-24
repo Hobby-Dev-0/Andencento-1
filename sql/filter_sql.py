@@ -1,6 +1,6 @@
 from sqlalchemy import Column, LargeBinary, Numeric, String, UnicodeText
 
-from userbot.sql import BASE, SESSION
+from sql import BASE, SESSION
 
 
 class Filters(BASE):
