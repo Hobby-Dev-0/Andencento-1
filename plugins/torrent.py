@@ -20,7 +20,7 @@ def dogbin(magnets):
     return urls
 
 
-@Andencento.on(admin_cmd(pattern=r"tsearch ?(.*)"))
+@Andencento.on(Andencento_cmd(pattern=r"tsearch ?(.*)"))
 @Andencento.on(sudo_cmd(pattern=r"tsearch ?(.*)", allow_sudo=True))
 async def tor_search(event):
     if event.fwd_from:
@@ -93,7 +93,7 @@ async def tor_search(event):
     await user.edit(msg, link_preview=False)
 
 
-@Andencento.on(admin_cmd(pattern=r"movie (torrentz2\.eu|idop\.se) (.*)"))
+@Andencento.on(Andencento_cmd(pattern=r"movie (torrentz2\.eu|idop\.se) (.*)"))
 @Andencento.on(
     sudo_cmd(pattern=r"movie (torrentz2\.eu|idop\.se) (.*)", allow_sudo=True)
 )

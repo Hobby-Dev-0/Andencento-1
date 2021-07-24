@@ -43,7 +43,7 @@ if Config.TAG_LOGGER:
             return
 
 
-@Andencento.on(admin_cmd(pattern=r"tagall (.*)", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=r"tagall (.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"tagall (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:

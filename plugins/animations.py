@@ -4,7 +4,7 @@ from collections import deque
 from . import *
 
 
-@Andencento.on(admin_cmd(pattern=r"boxs$", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=r"boxs$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"boxs$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -17,7 +17,7 @@ async def _(event):
         deq.rotate(1)
 
 
-@Andencento.on(admin_cmd(pattern=r"rain$", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=r"rain$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"rain$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -30,7 +30,7 @@ async def _(event):
         deq.rotate(1)
 
 
-@Andencento.on(admin_cmd(pattern=r"deploy$", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=r"deploy$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"deploy$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -57,7 +57,7 @@ async def _(event):
         await event.edit(animation_chars[i % 12])
 
 
-@Andencento.on(admin_cmd(pattern=r"dump$", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=r"dump$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"dump$", allow_sudo=True))
 async def _(message):
     if event.fwd_from:
@@ -100,7 +100,7 @@ async def _(message):
                 return
 
 
-@Andencento.on(admin_cmd(pattern=r"fleaveme$", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=r"fleaveme$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"fleaveme$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -126,7 +126,7 @@ async def _(event):
         await event.edit(animation_chars[i % 10])
 
 
-@Andencento.on(admin_cmd(pattern=r"loveu$", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=r"loveu$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"loveu$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -176,7 +176,7 @@ async def _(event):
         await event.edit(animation_chars[i % 35])
 
 
-@Andencento.on(admin_cmd(pattern=r"plane$", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=r"plane$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"plane$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -199,7 +199,7 @@ async def _(event):
     await asyncio.sleep(3)
 
 
-@Andencento.on(admin_cmd(pattern=r"police$", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=r"police$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"police$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -225,7 +225,7 @@ async def _(event):
         await event.edit(animation_chars[i % 12])
 
 
-@Andencento.on(admin_cmd(pattern=f"hack$", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=f"hack$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=f"hack$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -255,7 +255,7 @@ async def _(event):
         await event.edit(animation_chars[i % 15])
 
 
-@Andencento.on(admin_cmd(pattern=r"jio$", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=r"jio$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"jio$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -289,7 +289,7 @@ async def _(event):
         await event.edit(animation_chars[i % 19])
 
 
-@Andencento.on(admin_cmd(pattern=r"solarsystem$", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=r"solarsystem$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"solarsystem$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -312,7 +312,7 @@ async def _(event):
         await event.edit(animation_chars[i % 8])
 
 
-@Andencento.on(admin_cmd(pattern="degi$"))
+@Andencento.on(Andencento_cmd(pattern="degi$"))
 @Andencento.on(sudo_cmd(pattern="degi$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -337,7 +337,7 @@ async def _(event):
     await event.edit("Wo DeGi TuM eKbAr MaNg KaR tOh DeKhO😄")
 
 
-@Andencento.on(admin_cmd(pattern=f"nehi$", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=f"nehi$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=f"nehi$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -349,7 +349,7 @@ async def _(event):
     await asyncio.sleep(999)
 
 
-@Andencento.on(admin_cmd(pattern="hnd (.*)"))
+@Andencento.on(Andencento_cmd(pattern="hnd (.*)"))
 @Andencento.on(sudo_cmd(pattern="hnd (.*)", allow_sudo=True))
 async def _(event):
     name = event.pattern_match.group(1)
@@ -371,7 +371,7 @@ async def _(event):
         await event.edit(animation_chars[i % 6])
 
 
-@Andencento.on(admin_cmd(pattern="phub$", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern="phub$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="phub$", allow_sudo=True))
 async def _(event):
 
@@ -403,7 +403,7 @@ async def _(event):
         await event.edit(animation_chars[i % 10])
 
 
-@Andencento.on(admin_cmd(pattern=r"amore$", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=r"amore$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"amore$", allow_sudo=True))
 async def _(event):
 
@@ -434,7 +434,7 @@ async def _(event):
         await event.edit(animation_chars[i % 10])
 
 
-@Andencento.on(admin_cmd(pattern=r"sexy$", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=r"sexy$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"sexy$", allow_sudo=True))
 async def _(event):
 
@@ -464,7 +464,7 @@ async def _(event):
         await event.edit(animation_chars[i % 10])
 
 
-@Andencento.on(admin_cmd(pattern="istar$", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern="istar$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="istar$", allow_sudo=True))
 async def ammastar(userstar):
 
@@ -493,7 +493,7 @@ async def ammastar(userstar):
         await userstar.edit(animation_chars[i % 11])
 
 
-@Andencento.on(admin_cmd(pattern=r"lmoon", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=r"lmoon", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"lmoon", allow_sudo=True))
 async def test(event):
     if event.fwd_from:
@@ -504,7 +504,7 @@ async def test(event):
     )
 
 
-@Andencento.on(admin_cmd(pattern=r"city", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=r"city", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"city", allow_sudo=True))
 async def test(event):
     if event.fwd_from:
@@ -523,7 +523,7 @@ async def test(event):
     )
 
 
-@Andencento.on(admin_cmd(pattern=r"hii", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=r"hii", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"hii", allow_sudo=True))
 async def hi(event):
     if event.fwd_from:
@@ -531,7 +531,7 @@ async def hi(event):
     await eor(event, "🌺✨✨🌺✨🌺🌺🌺\n🌺✨✨🌺✨✨🌺✨\n🌺🌺🌺🌺✨✨🌺✨\n🌺✨✨🌺✨✨🌺✨\n🌺✨✨🌺✨🌺🌺🌺\n☁☁☁☁☁☁☁☁")
 
 
-@Andencento.on(admin_cmd(pattern=r"cheer", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=r"cheer", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"cheer", allow_sudo=True))
 async def cheer(event):
     if event.fwd_from:
@@ -542,7 +542,7 @@ async def cheer(event):
     )
 
 
-@Andencento.on(admin_cmd(pattern=r"getwell", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=r"getwell", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"getwell", allow_sudo=True))
 async def getwell(event):
     if event.fwd_from:
@@ -550,7 +550,7 @@ async def getwell(event):
     await eor(event, "🌹🌹🌹🌹🌹🌹🌹🌹 \n🌹😷😢😓😷😢💨🌹\n🌹💝💉🍵💊💐💝🌹\n🌹 GetBetter Soon! 🌹\n🌹🌹🌹🌹🌹🌹🌹🌹")
 
 
-@Andencento.on(admin_cmd(pattern="switch$", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern="switch$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="switch$", allow_sudo=True))
 async def _(event):
 
@@ -589,7 +589,7 @@ async def _(event):
         await event.edit(animation_chars[i % 11])
 
 
-@Andencento.on(admin_cmd(pattern=r"sprinkle", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=r"sprinkle", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"sprinkle", allow_sudo=True))
 async def sprinkle(event):
     if event.fwd_from:
@@ -600,7 +600,7 @@ async def sprinkle(event):
     )
 
 
-@Andencento.on(admin_cmd(pattern=r"f", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=r"f", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"f", allow_sudo=True))
 async def payf(event):
     if event.fwd_from:
@@ -623,7 +623,7 @@ async def payf(event):
     await eor(event, pay)
 
 
-@Andencento.on(admin_cmd(outgoing=True, pattern="kiler( (.*)|$)"))
+@Andencento.on(Andencento_cmd(outgoing=True, pattern="kiler( (.*)|$)"))
 @Andencento.on(sudo_cmd(pattern="kiler( (.*)|$)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -649,7 +649,7 @@ async def _(event):
         await event.edit(animation_chars[i % 8])
 
 
-@Andencento.on(admin_cmd(pattern="eye$"))
+@Andencento.on(Andencento_cmd(pattern="eye$"))
 @Andencento.on(sudo_cmd(pattern="eye$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -676,7 +676,7 @@ async def _(event):
     await event.delete()
 
 
-@Andencento.on(admin_cmd(pattern="thinking$"))
+@Andencento.on(Andencento_cmd(pattern="thinking$"))
 @Andencento.on(sudo_cmd(pattern="thinking$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -727,7 +727,7 @@ async def _(event):
         await event.edit(animation_chars[i % 36])
 
 
-@Andencento.on(admin_cmd(pattern=f"snake$", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=f"snake$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="snake$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -769,7 +769,7 @@ async def _(event):
         await event.edit(animation_chars[i % 27])
 
 
-@Andencento.on(admin_cmd(pattern=f"human$", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=f"human$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="human$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -800,7 +800,7 @@ async def _(event):
         await event.edit(animation_chars[i % 16])
 
 
-@Andencento.on(admin_cmd(pattern=f"mc$", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=f"mc$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="mc$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -843,7 +843,7 @@ async def _(event):
         await event.edit(animation_chars[i % 28])
 
 
-@Andencento.on(admin_cmd(pattern="virus$"))
+@Andencento.on(Andencento_cmd(pattern="virus$"))
 @Andencento.on(sudo_cmd(pattern="virus$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -888,7 +888,7 @@ async def _(event):
         await event.edit(animation_chars[i % 30])
 
 
-@Andencento.on(admin_cmd(pattern=r"repe$", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=r"repe$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="repe$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -933,7 +933,7 @@ async def _(event):
         await event.edit(animation_chars[i % 30])
 
 
-@Andencento.on(admin_cmd(pattern=f"nikal$", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=f"nikal$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="nikal$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -954,7 +954,7 @@ async def _(event):
         await event.edit(animation_chars[i % 6])
 
 
-@Andencento.on(admin_cmd(pattern=f"music$", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=f"music$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="music$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -980,7 +980,7 @@ async def _(event):
         await event.edit(animation_chars[i % 11])
 
 
-@Andencento.on(admin_cmd(pattern=f"squ$", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=f"squ$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="squ$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:

@@ -4,7 +4,7 @@ from telethon.tl.types import ChatBannedRights
 from . import *
 
 
-@Andencento.on(admin_cmd(pattern=r"lock ?(.*)", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=r"lock ?(.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"lock ?(.*)", allow_sudo=True))
 @errors_handler
 async def locks(event):
@@ -98,7 +98,7 @@ async def locks(event):
         return
 
 
-@Andencento.on(admin_cmd(pattern="unlock ?(.*)", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern="unlock ?(.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="unlock ?(.*)", allow_sudo=True))
 @errors_handler
 async def rem_locks(event):
@@ -199,7 +199,7 @@ async def rem_locks(event):
         return
 
 
-@Andencento.on(admin_cmd(pattern="ltype$"))
+@Andencento.on(Andencento_cmd(pattern="ltype$"))
 @Andencento.on(sudo_cmd(pattern="ltype$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:

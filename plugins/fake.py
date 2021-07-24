@@ -8,7 +8,7 @@ from telethon.tl.types import ChannelParticipantsAdmins
 from . import *
 
 
-@Andencento.on(admin_cmd(pattern="picgen"))
+@Andencento.on(Andencento_cmd(pattern="picgen"))
 @Andencento.on(sudo_cmd(pattern="picgen", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -27,7 +27,7 @@ async def _(event):
     os.system("rm /root/userbot/HELLBOT.jpg ")
 
 
-@Andencento.on(admin_cmd(pattern="fake ?(.*)"))
+@Andencento.on(Andencento_cmd(pattern="fake ?(.*)"))
 @Andencento.on(sudo_cmd(pattern="fake ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -41,7 +41,7 @@ async def _(event):
         await asyncio.sleep(86400)  # type for 10 seconds
 
 
-@Andencento.on(admin_cmd(pattern="gbam$"))
+@Andencento.on(Andencento_cmd(pattern="gbam$"))
 @Andencento.on(sudo_cmd(pattern="gbam$", allow_sudo=True))
 async def gbun(event):
     if event.fwd_from:

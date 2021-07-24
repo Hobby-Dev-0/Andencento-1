@@ -4,7 +4,7 @@ import os
 from . import *
 
 
-@Andencento.on(admin_cmd(pattern=r"unpack", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=r"unpack", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"unpack"))
 async def _(event):
     b = await event.client.download_media(await event.get_reply_message())
@@ -22,7 +22,7 @@ async def _(event):
     os.remove(b)
 
 
-@Andencento.on(admin_cmd(pattern=r"pack ?(.*)", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=r"pack ?(.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"pack ?(.*)", allow_sudo=True))
 async def _(event):
     a = await event.get_reply_message()

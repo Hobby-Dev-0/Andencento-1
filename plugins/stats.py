@@ -7,7 +7,7 @@ from telethon.tl.types import Channel, Chat, User
 from . import *
 
 
-@Andencento.on(admin_cmd(pattern="stats$"))
+@Andencento.on(Andencento_cmd(pattern="stats$"))
 @Andencento.on(sudo_cmd(pattern="stats$", allow_sudo=True))
 async def stats(
     event: NewMessage.Event,

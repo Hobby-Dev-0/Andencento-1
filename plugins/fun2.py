@@ -13,7 +13,7 @@ BASE_URL = "https://headp.at/pats/{}"
 PAT_IMAGE = "pat.jpg"
 
 
-@Andencento.on(admin_cmd(pattern="pat ?(.*)", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern="pat ?(.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="pat ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -36,7 +36,7 @@ async def _(event):
     remove(PAT_IMAGE)
 
 
-@Andencento.on(admin_cmd(pattern="join$", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern="join$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="join$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -53,7 +53,7 @@ async def _(event):
         await eor(event, mentions)
 
 
-@Andencento.on(admin_cmd(pattern="pay$", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern="pay$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="pay$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -70,7 +70,7 @@ async def _(event):
         await eor(event, mentions)
 
 
-@Andencento.on(admin_cmd(pattern="climb$", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern="climb$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="climb$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -87,7 +87,7 @@ async def _(event):
         await eor(event, mentions)
 
 
-@Andencento.on(admin_cmd(pattern="aag$", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern="aag$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="aag$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -104,7 +104,7 @@ async def _(event):
         await eor(event, mentions)
 
 
-@Andencento.on(admin_cmd(pattern="push$", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern="push$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="push$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -121,7 +121,7 @@ async def _(event):
         await eor(event, mentions)
 
 
-@Andencento.on(admin_cmd(pattern="work$", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern="work$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="work$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -138,7 +138,7 @@ async def _(event):
         await eor(event, mentions)
 
 
-@Andencento.on(admin_cmd(pattern="suckit$", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern="suckit$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="suckit$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -155,7 +155,7 @@ async def _(event):
         await eor(event, mentions)
 
 
-@Andencento.on(admin_cmd(pattern="ohh$", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern="ohh$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="ohh$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -172,7 +172,7 @@ async def _(event):
         await eor(event, mentions)
 
 
-@Andencento.on(admin_cmd(pattern="lovestory$", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern="lovestory$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="lovestory$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -202,7 +202,7 @@ async def _(event):
         await event.edit(animation_chars[i % 103])
 
 
-@Andencento.on(admin_cmd(pattern="bf$", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern="bf$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="bf$", allow_sudo=True))
 async def pressf(f):
     if f.fwd_from:
@@ -228,7 +228,7 @@ async def pressf(f):
         await eor(f"`" + out + "`")
 
 
-@Andencento.on(admin_cmd(pattern="session$", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern="session$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="session$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -237,7 +237,7 @@ async def _(event):
     await eor(event, mentions)
 
 
-@Andencento.on(admin_cmd(pattern="ftext ?(.*)"))
+@Andencento.on(Andencento_cmd(pattern="ftext ?(.*)"))
 @Andencento.on(sudo_cmd(pattern="ftext ?(.*)", allow_sudo=True))
 async def payf(event):
     if event.fwd_from:
@@ -265,7 +265,7 @@ async def payf(event):
     await event.edit(pay)
 
 
-@Andencento.on(admin_cmd(pattern="cat$"))
+@Andencento.on(Andencento_cmd(pattern="cat$"))
 @Andencento.on(sudo_cmd(pattern="cat$", allow_sudo=True))
 async def hmm(user):
     if user.fwd_from:
@@ -274,7 +274,7 @@ async def hmm(user):
     await eor(user, reactcat)
 
 
-@Andencento.on(admin_cmd(pattern="why$"))
+@Andencento.on(Andencento_cmd(pattern="why$"))
 @Andencento.on(sudo_cmd(pattern="why$", allow_sudo=True))
 async def hmm(user):
     if user.fwd_from:
@@ -283,7 +283,7 @@ async def hmm(user):
     await eor(user, whyuser)
 
 
-@Andencento.on(admin_cmd(pattern="fact$"))
+@Andencento.on(Andencento_cmd(pattern="fact$"))
 @Andencento.on(sudo_cmd(pattern="fact$", allow_sudo=True))
 async def hmm(user):
     if user.fwd_from:

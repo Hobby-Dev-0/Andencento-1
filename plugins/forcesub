@@ -75,7 +75,7 @@ async def forcesub(event):
         await res[0].click(event.chat_id, reply_to=event.action_message.id)
 
 
-@Andencento.on(admin_cmd(pattern="fsub ?(.*)"))
+@Andencento.on(Andencento_cmd(pattern="fsub ?(.*)"))
 @Andencento.on(sudo_cmd(pattern="fsub ?(.*)", allow_sudo=True))
 async def _(event):
     if event.is_private:
@@ -101,7 +101,7 @@ async def _(event):
     await eor(event, "Implementing **Force Subscribe** In This Channel !!")
 
 
-@Andencento.on(admin_cmd(pattern="rmfsub"))
+@Andencento.on(Andencento_cmd(pattern="rmfsub"))
 @Andencento.on(sudo_cmd(pattern="rmfsub", allow_sudo=True))
 async def removef(event):
     hel_ = rem_fsub(event.chat_id)
@@ -110,7 +110,7 @@ async def removef(event):
     await eor(e, "Deactivated **Force Subscribe** In This Channel !!")
 
 
-@Andencento.on(admin_cmd(pattern="chfsub"))
+@Andencento.on(Andencento_cmd(pattern="chfsub"))
 @Andencento.on(sudo_cmd(pattern="chfsub", allow_sudo=True))
 async def getfsub(event):
     all_chat = is_fsub(event.chat_id)
@@ -120,7 +120,7 @@ async def getfsub(event):
     await eor(event, f"**ForceSub Enabled ** :\n- {channel.title} `({all})`")
 
 
-@Andencento.on(admin_cmd(pattern="lsfsub$"))
+@Andencento.on(Andencento_cmd(pattern="lsfsub$"))
 @Andencento.on(sudo_cmd(pattern="lsfsub$", allow_sudo=True))
 async def list(event):
     channels = all_fsub()

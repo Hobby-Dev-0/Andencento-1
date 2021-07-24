@@ -8,7 +8,7 @@ from telethon.utils import get_input_location
 from . import *
 
 
-@Andencento.on(admin_cmd(pattern="getpic ?(.*)", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern="getpic ?(.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="getpic ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -132,7 +132,7 @@ async def get_full_user(event):
 name = "Profile Photos"
 
 
-@Andencento.on(admin_cmd(pattern="poto ?(.*)", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern="poto ?(.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="poto ?(.*)", allow_sudo=True))
 async def potocmd(event):
     uid = "".join(event.raw_text.split(maxsplit=1)[1:])

@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 from . import *
 
 
-@Andencento.on(admin_cmd(pattern="fext (.*)"))
+@Andencento.on(Andencento_cmd(pattern="fext (.*)"))
 @Andencento.on(sudo_cmd(pattern="fext (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:

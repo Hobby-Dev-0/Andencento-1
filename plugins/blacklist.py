@@ -25,7 +25,7 @@ async def on_new_message(event):
             break
 
 
-@Andencento.on(admin_cmd(pattern="addblacklist ((.|\n)*)"))
+@Andencento.on(Andencento_cmd(pattern="addblacklist ((.|\n)*)"))
 @Andencento.on(sudo_cmd(pattern="addblacklist ((.|\n)*)", allow_sudo=True))
 async def on_add_black_list(event):
     if event.fwd_from:
@@ -45,7 +45,7 @@ async def on_add_black_list(event):
     )
 
 
-@Andencento.on(admin_cmd(pattern="rmblacklist ((.|\n)*)"))
+@Andencento.on(Andencento_cmd(pattern="rmblacklist ((.|\n)*)"))
 @Andencento.on(sudo_cmd(pattern="rmblacklist ((.|\n)*)", allow_sudo=True))
 async def on_delete_blacklist(event):
     if event.fwd_from:
@@ -66,7 +66,7 @@ async def on_delete_blacklist(event):
     )
 
 
-@Andencento.on(admin_cmd(pattern="listblacklist$"))
+@Andencento.on(Andencento_cmd(pattern="listblacklist$"))
 @Andencento.on(sudo_cmd(pattern="listblacklist$", allow_sudo=True))
 async def on_view_blacklist(event):
     if event.fwd_from:

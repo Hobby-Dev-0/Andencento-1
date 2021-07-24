@@ -19,7 +19,7 @@ if not os.path.isdir(extracted):
     os.makedirs(extracted)
 
 
-@Andencento.on(admin_cmd(pattern="zip", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern="zip", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="zip", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -64,7 +64,7 @@ def zipdir(path, ziph):
             os.remove(os.path.join(root, file))
 
 
-@Andencento.on(admin_cmd(pattern="compress"))
+@Andencento.on(Andencento_cmd(pattern="compress"))
 @Andencento.on(sudo_cmd(pattern="compress", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -114,7 +114,7 @@ def zipdir(path, ziph):
             os.remove(os.path.join(root, file))
 
 
-@Andencento.on(admin_cmd(pattern="rar ?(.*)"))
+@Andencento.on(Andencento_cmd(pattern="rar ?(.*)"))
 @Andencento.on(sudo_cmd(pattern="rar ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -167,7 +167,7 @@ async def _(event):
         )
 
 
-@Andencento.on(admin_cmd(pattern="7z ?(.*)"))
+@Andencento.on(Andencento_cmd(pattern="7z ?(.*)"))
 @Andencento.on(sudo_cmd(pattern="7z ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -218,7 +218,7 @@ async def _(event):
         await event.edit("Local file compressed to `{}`".format(directory_name + ".7z"))
 
 
-@Andencento.on(admin_cmd(pattern="tar ?(.*)"))
+@Andencento.on(Andencento_cmd(pattern="tar ?(.*)"))
 @Andencento.on(sudo_cmd(pattern="tar ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -305,7 +305,7 @@ async def create_archive(input_directory):
     return return_name
 
 
-@Andencento.on(admin_cmd(pattern="unzip"))
+@Andencento.on(Andencento_cmd(pattern="unzip"))
 @Andencento.on(sudo_cmd(pattern="unzip", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -398,7 +398,7 @@ async def _(event):
         os.remove(downloaded_file_name)
 
 
-@Andencento.on(admin_cmd(pattern="unrar"))
+@Andencento.on(Andencento_cmd(pattern="unrar"))
 @Andencento.on(sudo_cmd(pattern="unrar", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -490,7 +490,7 @@ async def _(event):
         os.remove(downloaded_file_name)
 
 
-@Andencento.on(admin_cmd(pattern="untar"))
+@Andencento.on(Andencento_cmd(pattern="untar"))
 @Andencento.on(sudo_cmd(pattern="untar", allow_sudo=True))
 async def _(event):
     if event.fwd_from:

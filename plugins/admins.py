@@ -56,7 +56,7 @@ MUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=True)
 UNMUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
 
 
-@Andencento.on(admin_cmd(pattern="setgpic$"))
+@Andencento.on(Andencento_cmd(pattern="setgpic$"))
 @Andencento.on(sudo_cmd(pattern="setgpic$", allow_sudo=True))
 @errors_handler
 async def set_group_photo(gpic):
@@ -103,7 +103,7 @@ async def set_group_photo(gpic):
             )
 
 
-@Andencento.on(admin_cmd(pattern="promote(?: |$)(.*)"))
+@Andencento.on(Andencento_cmd(pattern="promote(?: |$)(.*)"))
 @Andencento.on(sudo_cmd(pattern="promote(?: |$)(.*)", allow_sudo=True))
 @errors_handler
 async def promote(promt):
@@ -145,7 +145,7 @@ async def promote(promt):
     )
 
 
-@Andencento.on(admin_cmd(pattern="demote(?: |$)(.*)"))
+@Andencento.on(Andencento_cmd(pattern="demote(?: |$)(.*)"))
 @Andencento.on(sudo_cmd(pattern="demote(?: |$)(.*)", allow_sudo=True))
 @errors_handler
 async def demote(dmod):
@@ -196,7 +196,7 @@ async def watcher(event):
             LOGS.info(str(e))
 
 
-@Andencento.on(admin_cmd(pattern=r"mute ?(.*)"))
+@Andencento.on(Andencento_cmd(pattern=r"mute ?(.*)"))
 @Andencento.on(sudo_cmd(pattern=r"mute ?(.*)", allow_sudo=True))
 async def muth(user):
     if user.is_private:
@@ -258,7 +258,7 @@ async def muth(user):
         )
 
 
-@Andencento.on(admin_cmd(pattern=r"unmute ?(.*)"))
+@Andencento.on(Andencento_cmd(pattern=r"unmute ?(.*)"))
 @Andencento.on(sudo_cmd(pattern=r"unmute ?(.*)", allow_sudo=True))
 async def nomuth(evn):
     if evn.is_private:
@@ -313,7 +313,7 @@ async def nomuth(evn):
         )
 
 
-@Andencento.on(admin_cmd(pattern="ban(?: |$)(.*)"))
+@Andencento.on(Andencento_cmd(pattern="ban(?: |$)(.*)"))
 @Andencento.on(sudo_cmd(pattern="ban(?: |$)(.*)", allow_sudo=True))
 @errors_handler
 async def ban(bon):
@@ -361,7 +361,7 @@ async def ban(bon):
     )
 
 
-@Andencento.on(admin_cmd(pattern="unban(?: |$)(.*)"))
+@Andencento.on(Andencento_cmd(pattern="unban(?: |$)(.*)"))
 @Andencento.on(sudo_cmd(pattern="unban(?: |$)(.*)", allow_sudo=True))
 @errors_handler
 async def nothanos(unbon):
@@ -393,7 +393,7 @@ async def nothanos(unbon):
         await userevent.edit("Invalid UserId!! Please Recheck it!!")
 
 
-@Andencento.on(admin_cmd(pattern="pin($| (.*))"))
+@Andencento.on(Andencento_cmd(pattern="pin($| (.*))"))
 @Andencento.on(sudo_cmd(pattern="pin($| (.*))", allow_sudo=True))
 @errors_handler
 async def pin(msg):
@@ -438,7 +438,7 @@ async def pin(msg):
         pass
 
 
-@Andencento.on(admin_cmd(pattern="kick(?: |$)(.*)"))
+@Andencento.on(Andencento_cmd(pattern="kick(?: |$)(.*)"))
 @Andencento.on(sudo_cmd(pattern="kick(?: |$)(.*)", allow_sudo=True))
 @errors_handler
 async def kick(usr):
@@ -478,7 +478,7 @@ async def kick(usr):
     )
 
 
-@Andencento.on(admin_cmd(pattern=f"zombies ?(.*)"))
+@Andencento.on(Andencento_cmd(pattern=f"zombies ?(.*)"))
 @Andencento.on(sudo_cmd(pattern=f"zombies ?(.*)", allow_sudo=True))
 async def rm_deletedacc(show):
     if show.fwd_from:
@@ -531,7 +531,7 @@ async def rm_deletedacc(show):
     )
 
 
-@Andencento.on(admin_cmd(pattern="undlt$"))
+@Andencento.on(Andencento_cmd(pattern="undlt$"))
 @Andencento.on(sudo_cmd(pattern="undlt$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:

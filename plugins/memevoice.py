@@ -8,7 +8,7 @@ from . import *
 # You can use it in your repo. But dont remove these lines...
 
 
-@Andencento.on(admin_cmd(pattern="mev(?: |$)(.*)", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern="mev(?: |$)(.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="mev(?: |$)(.*)", allow_sudo=True))
 async def nope(kraken):
     user = kraken.pattern_match.group(1)
@@ -37,7 +37,7 @@ async def nope(kraken):
         await eod(kraken, "**Error 404:**  Not Found")
 
 
-@Andencento.on(admin_cmd(pattern="meev(?: |$)(.*)", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern="meev(?: |$)(.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="meev(?: |$)(.*)", allow_sudo=True))
 async def nope(kraken):
     user = kraken.pattern_match.group(1)

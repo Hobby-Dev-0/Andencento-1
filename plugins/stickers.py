@@ -15,7 +15,7 @@ from telethon.tl.types import (DocumentAttributeFilename,
 from . import *
 
 
-@Andencento.on(admin_cmd(pattern="kang"))
+@Andencento.on(Andencento_cmd(pattern="kang"))
 async def kang(args):
     """For .kang command, kangs stickers or creates new ones."""
     user = await bot.get_me()

@@ -6,7 +6,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from . import *
 
 
-@Andencento.on(admin_cmd(pattern=r"(qbot|ss) ?(.*)", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=r"(qbot|ss) ?(.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"(qbot|ss) ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:

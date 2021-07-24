@@ -6,7 +6,7 @@ SUDO_WALA = Config.SUDO_USERS
 lg_id = Config.LOGGER_ID
 
 
-@Andencento.on(admin_cmd(pattern="spam (.*)"))
+@Andencento.on(Andencento_cmd(pattern="spam (.*)"))
 @Andencento.on(sudo_cmd(pattern="spam (.*)", allow_sudo=True))
 async def spammer(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
@@ -20,7 +20,7 @@ async def spammer(e):
         )
 
 
-@Andencento.on(admin_cmd(pattern="bigspam"))
+@Andencento.on(Andencento_cmd(pattern="bigspam"))
 @Andencento.on(sudo_cmd(pattern="bigspam", allow_sudo=True))
 async def bigspam(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
@@ -36,7 +36,7 @@ async def bigspam(e):
             )
 
 
-@Andencento.on(admin_cmd("dspam (.*)"))
+@Andencento.on(Andencento_cmd("dspam (.*)"))
 @Andencento.on(sudo_cmd(pattern="dspam (.*)", allow_sudo=True))
 async def spammer(e):
     if e.fwd_from:
@@ -51,7 +51,7 @@ async def spammer(e):
         await asyncio.sleep(spamDelay)
 
 
-@Andencento.on(admin_cmd(pattern="mspam (.*)"))
+@Andencento.on(Andencento_cmd(pattern="mspam (.*)"))
 @Andencento.on(sudo_cmd(pattern="mspam (.*)", allow_sudo=True))
 async def tiny_pic_spam(e):
     await e.get_sender()

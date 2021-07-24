@@ -4,7 +4,7 @@ import requests
 from . import *
 
 
-@Andencento.on(admin_cmd(pattern="app (.*)"))
+@Andencento.on(Andencento_cmd(pattern="app (.*)"))
 @Andencento.on(sudo_cmd(pattern="app (.*)", allow_sudo=True))
 async def apk(event):
     if event.fwd_from:
@@ -76,7 +76,7 @@ async def apk(event):
         await event.edit("Exception Occured:- " + str(err))
 
 
-@Andencento.on(admin_cmd(pattern="appr (.*)"))
+@Andencento.on(Andencento_cmd(pattern="appr (.*)"))
 @Andencento.on(sudo_cmd(pattern="appr (.*)", allow_sudo=True))
 async def apkr(event):
     if event.fwd_from:
@@ -149,7 +149,7 @@ async def apkr(event):
         await event.edit("Exception Occured:- " + str(err))
 
 
-@Andencento.on(admin_cmd(pattern="mods ?(.*)"))
+@Andencento.on(Andencento_cmd(pattern="mods ?(.*)"))
 @Andencento.on(sudo_cmd(pattern="mods ?(.*)", allow_sudo=True))
 async def mod(event):
     if event.fwd_from:

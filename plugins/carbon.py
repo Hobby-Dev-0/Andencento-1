@@ -12,7 +12,7 @@ CARBONLANG = "auto"
 LANG = "en"
 
 
-@Andencento.on(admin_cmd(outgoing=True, pattern="carbon(?: |$)(.*)"))
+@Andencento.on(Andencento_cmd(outgoing=True, pattern="carbon(?: |$)(.*)"))
 @Andencento.on(sudo_cmd(pattern="carbon(?: |$)(.*)", allow_sudo=True))
 async def carbon_api(e):
     if e.fwd_from:
@@ -76,7 +76,7 @@ async def carbon_api(e):
     await user.delete()
 
 
-@Andencento.on(admin_cmd(outgoing=True, pattern="krb"))
+@Andencento.on(Andencento_cmd(outgoing=True, pattern="krb"))
 @Andencento.on(sudo_cmd(pattern="krb", allow_sudo=True))
 async def carbon_api(e):
     if e.fwd_from:
@@ -160,7 +160,7 @@ async def carbon_api(e):
     await user.delete()
 
 
-@Andencento.on(admin_cmd(pattern=f"kar1(?: |$)(.*)", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=f"kar1(?: |$)(.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="kar1(?: |$)(.*)", allow_sudo=True))
 async def carbon_api(e):
     if e.fwd_from:
@@ -221,7 +221,7 @@ async def carbon_api(e):
     await user.delete()  # Deleting msg
 
 
-@Andencento.on(admin_cmd(pattern=f"kar2(?: |$)(.*)", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=f"kar2(?: |$)(.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="kar2(?: |$)(.*)", allow_sudo=True))
 async def carbon_api(e):
     if e.fwd_from:
@@ -282,7 +282,7 @@ async def carbon_api(e):
     await user.delete()  # Deleting msg
 
 
-@Andencento.on(admin_cmd(pattern=f"kar3(?: |$)(.*)", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=f"kar3(?: |$)(.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="kar3(?: |$)(.*)", allow_sudo=True))
 async def carbon_api(e):
     if e.fwd_from:
@@ -347,7 +347,7 @@ async def carbon_api(e):
     await user.delete()  # Deleting msg
 
 
-@Andencento.on(admin_cmd(pattern=f"kar4(?: |$)(.*)", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=f"kar4(?: |$)(.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="kar4(?: |$)(.*)", allow_sudo=True))
 async def carbon_api(e):
     if e.fwd_from:
@@ -412,7 +412,7 @@ async def carbon_api(e):
     await user.delete()  # Deleting msg
 
 
-@Andencento.on(admin_cmd(pattern=f"rgbk2(?: |$)(.*)", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=f"rgbk2(?: |$)(.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="rgbk2(?: |$)(.*)", allow_sudo=True))
 async def carbon_api(e):
     if e.fwd_from:
@@ -481,7 +481,7 @@ async def carbon_api(e):
     await user.delete()  # Deleting msg
 
 
-@Andencento.on(admin_cmd(pattern=f"kargb(?: |$)(.*)", outgoing=True))
+@Andencento.on(Andencento_cmd(pattern=f"kargb(?: |$)(.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="kargb(?: |$)(.*)", allow_sudo=True))
 async def carbon_api(e):
     if e.fwd_from:

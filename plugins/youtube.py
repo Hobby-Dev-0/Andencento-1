@@ -14,7 +14,7 @@ from youtube_search import YoutubeSearch
 from . import *
 
 
-@Andencento.on(admin_cmd(pattern="yt(a|v) (.*)"))
+@Andencento.on(Andencento_cmd(pattern="yt(a|v) (.*)"))
 @Andencento.on(sudo_cmd(pattern="yt(a|v) (.*)", allow_sudo=True))
 async def download_video(v_url):
     if v_url.fwd_from:
@@ -148,7 +148,7 @@ async def download_video(v_url):
         await v_url.delete()
 
 
-@Andencento.on(admin_cmd(pattern="ytlink ?(.*)"))
+@Andencento.on(Andencento_cmd(pattern="ytlink ?(.*)"))
 @Andencento.on(sudo_cmd(pattern="ytlink ?(.*)", allow_sudo=True))
 async def hmm(ytwala):
     query = ytwala.pattern_match.group(1)
