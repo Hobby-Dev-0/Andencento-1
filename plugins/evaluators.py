@@ -10,7 +10,7 @@ from . import *
 lg_id = Config.LOGGER_ID
 
 
-@Andencento.on(admin_cmd(pattern="exec(?: |$|\n)(.*)", command="exec"))
+@Andencento.on(andencento_cmd(pattern="exec(?: |$|\n)(.*)", command="exec"))
 async def _(event):
     if Config.I_AM_DEVELOPER != "True":
         await eor(
@@ -49,7 +49,7 @@ async def _(event):
     )
 
 
-@Andencento.on(admin_cmd(pattern="eval(?: |$|\n)(.*)", command="eval"))
+@Andencento.on(andencento_cmd(pattern="eval(?: |$|\n)(.*)", command="eval"))
 async def _(event):
     if Config.I_AM_DEVELOPER != "True":
         await eor(
@@ -106,7 +106,7 @@ async def aexec(code, smessatatus):
     )
 
 
-@Andencento.on(admin_cmd(pattern="bash ?(.*)", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="bash ?(.*)", outgoing=True))
 async def _(event):
     if Config.I_AM_DEVELOPER != "True":
         await eor(

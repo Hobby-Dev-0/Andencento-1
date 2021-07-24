@@ -19,7 +19,7 @@ except:
 from . import *
 
 
-@Andencento.on(admin_cmd(pattern="lyrics(?: |$)(.*)", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="lyrics(?: |$)(.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="lyrics(?: |$)(.*)", allow_sudo=True))
 async def nope(kraken):
     user = kraken.pattern_match.group(1)
@@ -43,7 +43,7 @@ async def nope(kraken):
     await kraken.delete()
 
 
-@Andencento.on(admin_cmd(pattern="song(?: |$)(.*)", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="song(?: |$)(.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="song(?: |$)(.*)", allow_sudo=True))
 async def download_video(v_url):
     lazy = v_url
@@ -166,7 +166,7 @@ async def download_video(v_url):
         await rkp.delete()
 
 
-@Andencento.on(admin_cmd(pattern="vsong(?: |$)(.*)", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="vsong(?: |$)(.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="vsong(?: |$)(.*)", allow_sudo=True))
 async def download_video(v_url):
     lazy = v_url

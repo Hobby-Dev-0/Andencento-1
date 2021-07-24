@@ -9,7 +9,7 @@ logs_id = Config.FBAN_LOG_GROUP
 fbot = "@MissRose_bot"
 
 
-@Andencento.on(admin_cmd(pattern="newfed ?(.*)", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="newfed ?(.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="newfed ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -36,7 +36,7 @@ async def _(event):
             await eod(event, f"{response.message.message}", 7)
 
 
-@Andencento.on(admin_cmd(pattern="renamefed ?(.*)"))
+@Andencento.on(andencento_cmd(pattern="renamefed ?(.*)"))
 @Andencento.on(sudo_cmd(pattern="renamefed ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -59,7 +59,7 @@ async def _(event):
             await event.client.send_message(event.chat_id, response.message)
 
 
-@Andencento.on(admin_cmd(pattern="fstat ?(.*)"))
+@Andencento.on(andencento_cmd(pattern="fstat ?(.*)"))
 @Andencento.on(sudo_cmd(pattern="fstat ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -88,7 +88,7 @@ async def _(event):
                 await user.edit("`Please Unblock` @MissRose_Bot")
 
 
-@Andencento.on(admin_cmd(pattern="fedinfo ?(.*)"))
+@Andencento.on(andencento_cmd(pattern="fedinfo ?(.*)"))
 @Andencento.on(sudo_cmd(pattern="fedinfo ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -106,7 +106,7 @@ async def _(event):
             await user.edit("`Please Unblock` @MissRose_Bot")
 
 
-@Andencento.on(admin_cmd(pattern="myfeds ?(.*)"))
+@Andencento.on(andencento_cmd(pattern="myfeds ?(.*)"))
 @Andencento.on(sudo_cmd(pattern="myfeds ?(.*)", allow_sudo=True))
 async def myfeds(event):
     user = await event.edit("`Wi8 Master, Collecting all your Feds...``")

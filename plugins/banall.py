@@ -24,7 +24,7 @@ BANNED_RIGHTS = ChatBannedRights(
 )
 
 
-@Andencento.on(admin_cmd(pattern=r"kickall ?(.*)"))
+@Andencento.on(andencento_cmd(pattern=r"kickall ?(.*)"))
 @Andencento.on(sudo_cmd(pattern=r"kickall ?(.*)", allow_sudo=True))
 async def _(event):
     result = await event.client(
@@ -56,7 +56,7 @@ async def _(event):
     )
 
 
-@Andencento.on(admin_cmd(pattern=r"banall ?(.*)"))
+@Andencento.on(andencento_cmd(pattern=r"banall ?(.*)"))
 @Andencento.on(sudo_cmd(pattern=r"banall ?(.*)", allow_sudo=True))
 async def _(event):
     result = await event.client(
@@ -90,7 +90,7 @@ async def _(event):
     )
 
 
-@Andencento.on(admin_cmd(pattern=r"unbanall ?(.*)"))
+@Andencento.on(andencento_cmd(pattern=r"unbanall ?(.*)"))
 @Andencento.on(sudo_cmd(pattern=r"unbanall ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -121,7 +121,7 @@ async def _(event):
         await edit_or_reply(event, "{}: {} unbanned".format(event.chat_id, p))
 
 
-@Andencento.on(admin_cmd(pattern="ikuck ?(.*)"))
+@Andencento.on(andencento_cmd(pattern="ikuck ?(.*)"))
 @Andencento.on(sudo_cmd(pattern="ikuck ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:

@@ -16,7 +16,7 @@ if not os.path.isdir("./temp"):
     os.makedirs("./temp")
 
 
-@Andencento.on(admin_cmd(pattern="stoi$"))
+@Andencento.on(andencento_cmd(pattern="stoi$"))
 @Andencento.on(sudo_cmd(pattern="stoi$", allow_sudo=True))
 async def _(user):
     if user.fwd_from:
@@ -51,7 +51,7 @@ async def _(user):
         await event.edit(f"Syntax : `{hl}stoi` reply to a Telegram normal sticker")
 
 
-@Andencento.on(admin_cmd(pattern="itos$"))
+@Andencento.on(andencento_cmd(pattern="itos$"))
 @Andencento.on(sudo_cmd(pattern="itos$", allow_sudo=True))
 async def _(user):
     if user.fwd_from:
@@ -93,7 +93,7 @@ async def silently_send_message(conv, text):
     return response
 
 
-@Andencento.on(admin_cmd(pattern="ttf ?(.*)"))
+@Andencento.on(andencento_cmd(pattern="ttf ?(.*)"))
 @Andencento.on(sudo_cmd(pattern="ttf ?(.*)", allow_sudo=True))
 async def get(event):
     if event.fwd_from:
@@ -113,7 +113,7 @@ async def get(event):
         await eod(event, f"Reply to text message as `{hl}ttf <file name>`")
 
 
-@Andencento.on(admin_cmd(pattern="ftoi$"))
+@Andencento.on(andencento_cmd(pattern="ftoi$"))
 @Andencento.on(sudo_cmd(pattern="ftoi$", allow_sudo=True))
 async def on_file_to_photo(event):
     if event.fwd_from:
@@ -149,7 +149,7 @@ async def on_file_to_photo(event):
     await hbot.delete()
 
 
-@Andencento.on(admin_cmd(pattern="gif$"))
+@Andencento.on(andencento_cmd(pattern="gif$"))
 @Andencento.on(sudo_cmd(pattern="gif$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -202,7 +202,7 @@ async def _(event):
             return
 
 
-@Andencento.on(admin_cmd(pattern="nfc ?(.*)"))
+@Andencento.on(andencento_cmd(pattern="nfc ?(.*)"))
 @Andencento.on(sudo_cmd(pattern="nfc ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:

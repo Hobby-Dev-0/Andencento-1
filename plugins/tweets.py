@@ -1,7 +1,7 @@
 from . import *
 
 
-@bot.on(admin_cmd(pattern=r"tweet(?: |$)(.*)"))
+@bot.on(andencento_cmd(pattern=r"tweet(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="tweet(?: |$)(.*)", allow_sudo=True))
 async def nope(hemlo):
     hell = hemlo.pattern_match.group(1)
@@ -21,7 +21,7 @@ async def nope(hemlo):
     await hemlo.delete()
 
 
-@bot.on(admin_cmd(pattern=r"trump(?: |$)(.*)"))
+@bot.on(andencento_cmd(pattern=r"trump(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="trump(?: |$)(.*)", allow_sudo=True))
 async def nekobot(borg):
     text = borg.pattern_match.group(1)
@@ -54,7 +54,7 @@ async def nekobot(borg):
     await borg.delete()
 
 
-@bot.on(admin_cmd(pattern=r"modi(?: |$)(.*)"))
+@bot.on(andencento_cmd(pattern=r"modi(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="modi(?: |$)(.*)", allow_sudo=True))
 async def nekobot(borg):
     text = borg.pattern_match.group(1)
@@ -87,7 +87,7 @@ async def nekobot(borg):
     await borg.delete()
 
 
-@bot.on(admin_cmd(pattern=r"mia(?: |$)(.*)"))
+@bot.on(andencento_cmd(pattern=r"mia(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="mia(?: |$)(.*)", allow_sudo=True))
 async def nekobot(borg):
     text = borg.pattern_match.group(1)
@@ -121,7 +121,7 @@ async def nekobot(borg):
 
 
 # @register(pattern="^.pappu(?: |$)(.*)", outgoing=True)
-@bot.on(admin_cmd(pattern=r"pappu(?: |$)(.*)"))
+@bot.on(andencento_cmd(pattern=r"pappu(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="pappu(?: |$)(.*)", allow_sudo=True))
 async def nekobot(borg):
     text = borg.pattern_match.group(1)
@@ -155,7 +155,7 @@ async def nekobot(borg):
 
 
 # @register(pattern="^.sunny(?: |$)(.*)", outgoing=True)
-@bot.on(admin_cmd(pattern=r"sunny(?: |$)(.*)"))
+@bot.on(andencento_cmd(pattern=r"sunny(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="sunny(?: |$)(.*)", allow_sudo=True))
 async def nekobot(borg):
     text = borg.pattern_match.group(1)
@@ -189,7 +189,7 @@ async def nekobot(borg):
 
 
 # @register(pattern="^.johhny(?: |$)(.*)", outgoing=True)
-@bot.on(admin_cmd(pattern=r"johhny(?: |$)(.*)"))
+@bot.on(andencento_cmd(pattern=r"johhny(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="johhny(?: |$)(.*)", allow_sudo=True))
 async def nekobot(borg):
     text = borg.pattern_match.group(1)
@@ -222,7 +222,7 @@ async def nekobot(borg):
     await borg.delete()
 
 
-@bot.on(admin_cmd(pattern=r"gandhi(?: |$)(.*)"))
+@bot.on(andencento_cmd(pattern=r"gandhi(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="gandhi(?: |$)(.*)", allow_sudo=True))
 async def nekobot(borg):
     text = borg.pattern_match.group(1)
@@ -256,7 +256,7 @@ async def nekobot(borg):
 
 
 # @register(pattern="^.cmm(?: |$)(.*)", outgoing=True)
-@bot.on(admin_cmd(pattern=r"cmm(?: |$)(.*)"))
+@bot.on(andencento_cmd(pattern=r"cmm(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="cmm(?: |$)(.*)", allow_sudo=True))
 async def nekobot(borg):
     text = borg.pattern_match.group(1)
@@ -290,7 +290,7 @@ async def nekobot(borg):
 
 
 # @register(pattern="^.kanna(?: |$)(.*)", outgoing=True)
-@bot.on(admin_cmd(pattern=r"kanna(?: |$)(.*)"))
+@bot.on(andencento_cmd(pattern=r"kanna(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="kanna(?: |$)(.*)", allow_sudo=True))
 async def nekobot(borg):
     text = borg.pattern_match.group(1)

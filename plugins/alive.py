@@ -22,7 +22,7 @@ pm_caption += "➥ **¢σρуяιgнт** : By [𝘛𝘦𝘢𝘮 𝘈𝘯𝘥𝘦
 
 
 # only Owner Can Use it
-@Andencento.on(admin_cmd(outgoing=True, pattern="alive$"))
+@Andencento.on(andencento_cmd(outgoing=True, pattern="alive$"))
 @Andencento.on(sudo_cmd(pattern="alive$", allow_sudo=True))
 async def _(event):
     await event.get_chat()

@@ -6,7 +6,7 @@ from telethon.tl.types import InputMessagesFilterDocument
 from . import *
 
 
-@Andencento.on(admin_cmd(pattern="extdl$", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="extdl$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="extdl$", allow_sudo=True))
 async def install(event):
     if event.fwd_from:
@@ -40,7 +40,7 @@ async def install(event):
             )
 
 
-@Andencento.on(admin_cmd(pattern=r"installall (.*)"))
+@Andencento.on(andencento_cmd(pattern=r"installall (.*)"))
 @Andencento.on(sudo_cmd(pattern=r"installall (.*)", allow_sudo=True))
 async def install(event):
     if event.fwd_from:

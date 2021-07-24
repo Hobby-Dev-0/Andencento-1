@@ -46,7 +46,7 @@ async def _(event):
     return
 
 
-@Andencento.on(admin_cmd(pattern=r"gban ?(.*)"))
+@Andencento.on(andencento_cmd(pattern=r"gban ?(.*)"))
 async def _(event):
     user = await eor(event, "`Gbanning this retard`")
     reason = ""
@@ -109,7 +109,7 @@ async def _(event):
         await user.edit(ogmsg)
 
 
-@Andencento.on(admin_cmd(pattern=r"ungban ?(.*)"))
+@Andencento.on(andencento_cmd(pattern=r"ungban ?(.*)"))
 async def _(event):
     user = await eor(event, "`Ungban in progress...`")
     if event.reply_to_msg_id:
@@ -139,7 +139,7 @@ async def _(event):
     )
 
 
-@Andencento.on(admin_cmd(pattern="listgban$"))
+@Andencento.on(andencento_cmd(pattern="listgban$"))
 async def already(event):
     gbanned_users = all_gbanned()
     GBANNED_LIST = "**Gbanned Users :**\n"
@@ -174,7 +174,7 @@ async def _(event):
                     pass
 
 
-@Andencento.on(admin_cmd(pattern=r"gkick ?(.*)"))
+@Andencento.on(andencento_cmd(pattern=r"gkick ?(.*)"))
 async def gkick(event):
     user = await eor(event, "`Kicking globally...`")
     if event.reply_to_msg_id:
@@ -205,7 +205,7 @@ async def gkick(event):
         await user.edit(gkmsg)
 
 
-@Andencento.on(admin_cmd(pattern=r"gmute ?(\d+)?"))
+@Andencento.on(andencento_cmd(pattern=r"gmute ?(\d+)?"))
 async def gm(event):
     private = False
     if event.fwd_from:
@@ -242,7 +242,7 @@ async def gm(event):
         await eor(event, "Shhh.... Now keep quiet !!")
 
 
-@Andencento.on(admin_cmd(outgoing=True, pattern=r"ungmute ?(\d+)?"))
+@Andencento.on(andencento_cmd(outgoing=True, pattern=r"ungmute ?(\d+)?"))
 async def endgmute(event):
     private = False
     if event.fwd_from:
@@ -328,7 +328,7 @@ async def get_user_from_id(user, event):
     return user_obj
 
 
-@Andencento.on(admin_cmd(pattern="gpromote ?(.*)"))
+@Andencento.on(andencento_cmd(pattern="gpromote ?(.*)"))
 async def gben(userbot):
     dc = dark = userbot
     i = 0
@@ -383,7 +383,7 @@ async def gben(userbot):
     )
 
 
-@Andencento.on(admin_cmd(pattern="gdemote ?(.*)"))
+@Andencento.on(andencento_cmd(pattern="gdemote ?(.*)"))
 async def gben(userbot):
     dc = dark = userbot
     i = 0

@@ -3,7 +3,7 @@ import datetime
 from . import *
 
 
-@Andencento.on(admin_cmd(pattern="ping$"))
+@Andencento.on(andencento_cmd(pattern="ping$"))
 @Andencento.on(sudo_cmd(pattern="ping$", allow_sudo=True))
 async def pong(user):
     if user.fwd_from:

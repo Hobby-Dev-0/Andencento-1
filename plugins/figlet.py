@@ -3,7 +3,7 @@ import pyfiglet
 from . import *
 
 
-@Andencento.on(admin_cmd(pattern="figlet ?(.*)", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="figlet ?(.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="figlet ?(.*)", allow_sudo=True))
 async def figlet(event):
     if event.fwd_from:

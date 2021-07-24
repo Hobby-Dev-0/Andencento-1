@@ -7,7 +7,7 @@ from . import *
 lg_id = Config.LOGGER_ID
 
 
-@Andencento.on(admin_cmd(pattern="del$"))
+@Andencento.on(andencento_cmd(pattern="del$"))
 @Andencento.on(sudo_cmd(pattern="del$", allow_sudo=True))
 @errors_handler
 async def delete_it(safai):
@@ -20,7 +20,7 @@ async def delete_it(safai):
             pass
 
 
-@Andencento.on(admin_cmd(pattern=r"purge", outgoing=True))
+@Andencento.on(andencento_cmd(pattern=r"purge", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"purge", allow_sudo=True))
 @errors_handler
 async def fastpurger(purg):
@@ -50,7 +50,7 @@ async def fastpurger(purg):
     await done.delete()
 
 
-@Andencento.on(admin_cmd(pattern=r"purgeme", outgoing=True))
+@Andencento.on(andencento_cmd(pattern=r"purgeme", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"purgeme", allow_sudo=True))
 @errors_handler
 async def purgeme(delme):
@@ -76,7 +76,7 @@ async def purgeme(delme):
     await smsg.delete()
 
 
-@Andencento.on(admin_cmd(pattern=r"sd", outgoing=True))
+@Andencento.on(andencento_cmd(pattern=r"sd", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"sd", allow_sudo=True))
 @errors_handler
 async def selfdestruct(destroy):

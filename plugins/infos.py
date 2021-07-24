@@ -25,7 +25,7 @@ from telethon.utils import get_input_location, pack_bot_file_id
 from . import *
 
 
-@Andencento.on(admin_cmd(pattern="recognize ?(.*)", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="recognize ?(.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="recognize ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -67,7 +67,7 @@ async def _(event):
             await eod(event, "sorry, I couldnt find it")
 
 
-@Andencento.on(admin_cmd(pattern="info ?(.*)", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="info ?(.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="info ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -200,7 +200,7 @@ async def get_full_user(event):
                 return None, e
 
 
-@Andencento.on(admin_cmd(pattern="chatinfo(?: |$)(.*)", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="chatinfo(?: |$)(.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="chatinfo(?: |$)(.*)", allow_sudo=True))
 async def info(event):
     if event.fwd_from:
@@ -472,7 +472,7 @@ async def fetch_info(chat, event):
     return caption
 
 
-@Andencento.on(admin_cmd(pattern=r"users ?(.*)", outgoing=True))
+@Andencento.on(andencento_cmd(pattern=r"users ?(.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"users ?(.*)", allow_sudo=True))
 async def get_users(show):
     if show.fwd_from:
@@ -523,7 +523,7 @@ async def get_users(show):
         remove("userslist.txt")
 
 
-@Andencento.on(admin_cmd(pattern="admins ?(.*)"))
+@Andencento.on(andencento_cmd(pattern="admins ?(.*)"))
 @Andencento.on(sudo_cmd(pattern="admins ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -576,7 +576,7 @@ async def _(event):
     await event.delete()
 
 
-@Andencento.on(admin_cmd(pattern="bots ?(.*)"))
+@Andencento.on(andencento_cmd(pattern="bots ?(.*)"))
 @Andencento.on(sudo_cmd(pattern="bots ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -609,7 +609,7 @@ async def _(event):
     await event.edit(mentions)
 
 
-@Andencento.on(admin_cmd(pattern="id$"))
+@Andencento.on(andencento_cmd(pattern="id$"))
 @Andencento.on(sudo_cmd(pattern="id$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:

@@ -26,7 +26,7 @@ async def restart(event):
     await bash("pkill python3 && python3 -m userbot")
 
 
-@Andencento.on(admin_cmd(pattern="restart$"))
+@Andencento.on(andencento_cmd(pattern="restart$"))
 @Andencento.on(sudo_cmd(pattern="restart$", allow_sudo=True))
 async def re(user):
     if user.fwd_from:
@@ -35,7 +35,7 @@ async def re(user):
     await restart(event)
 
 
-@Andencento.on(admin_cmd(pattern="shutdown$"))
+@Andencento.on(andencento_cmd(pattern="shutdown$"))
 @Andencento.on(sudo_cmd(pattern="shutdown$", allow_sudo=True))
 async def down(user):
     if user.fwd_from:
@@ -50,7 +50,7 @@ async def down(user):
 
 
 @Andencento.on(
-    admin_cmd(pattern="(set|get|del) var(?: |$)(.*)(?: |$)([\s\S]*)", outgoing=True)
+    andencento_cmd(pattern="(set|get|del) var(?: |$)(.*)(?: |$)([\s\S]*)", outgoing=True)
 )
 @Andencento.on(
     sudo_cmd(pattern="(set|get|del) var(?: |$)(.*)(?: |$)([\s\S]*)", allow_sudo=True)
@@ -150,7 +150,7 @@ async def variable(user):
             return await event.edit(f"`{variable}`  **does not exists**")
 
 
-@Andencento.on(admin_cmd(pattern="usage(?: |$)", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="usage(?: |$)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="usage(?: |$)", allow_sudo=True))
 async def dyno_usage(user):
     if user.fwd_from:
@@ -212,7 +212,7 @@ async def dyno_usage(user):
     )
 
 
-@Andencento.on(admin_cmd(pattern="logs$"))
+@Andencento.on(andencento_cmd(pattern="logs$"))
 @Andencento.on(sudo_cmd(pattern="logs$", allow_sudo=True))
 async def _(dyno):
     if (HEROKU_APP_NAME is None) or (HEROKU_API_KEY is None):
