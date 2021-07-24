@@ -16,7 +16,6 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         result = None
         query = event.text
         button = paginate_help(0, CMD_LIST, "helpme")
-        veriler = button(0, sorted(CMD_HELP))
         apn = []
         for x in CMD_LIST.values():
             for y in x:
