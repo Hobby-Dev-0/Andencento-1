@@ -6,7 +6,7 @@ from telethon.tl.functions.messages import ExportChatInviteRequest
 from userbot.sql.fsub_sql import *
 from . import *
 """
-@tgAndencento.on(InlineQuery)
+@tgbot.on(InlineQuery)
 async def fsub_in(event):
         builder = event.builder
         query = event.text
@@ -33,7 +33,7 @@ async def fsub_in(event):
             await event.answer(sub)
 
 
-@tgAndencento.on(callbackquery.CallbackQuery(data=compile(b"unmute")))
+@tgbot.on(callbackquery.CallbackQuery(data=compile(b"unmute")))
 async def on_pm_click(event):
     hunter = (event.data_match.group(1)).decode("UTF-8")
     user = hunter.split("+")

@@ -9,7 +9,7 @@ from userbot import CMD_LIST
 
 if Config.BOT_USERNAME is not None and tgbot is not None:
 
-    @tgAndencento.on(events.InlineQuery)  # pylint:disable=E0602
+    @tgbot.on(events.InlineQuery)  # pylint:disable=E0602
     async def inline_handler(event):
         builder = event.builder
         result = None
@@ -25,7 +25,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             )
         await event.answer([result] if result else None)
 
-    @tgAndencento.on(
+    @tgbot.on(
         events.callbackquery.CallbackQuery(  # pylint:disable=E0602
             data=re.compile(b"helpme_next\((.+?)\)")
         )
@@ -44,7 +44,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             )
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
-    @tgAndencento.on(
+    @tgbot.on(
         events.callbackquery.CallbackQuery(  # pylint:disable=E0602
             data=re.compile(b"helpme_prev\((.+?)\)")
         )
@@ -65,7 +65,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             )
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
-    @tgAndencento.on(
+    @tgbot.on(
         events.callbackquery.CallbackQuery(  # pylint:disable=E0602
             data=re.compile(b"us_plugin_(.*)")
         )
