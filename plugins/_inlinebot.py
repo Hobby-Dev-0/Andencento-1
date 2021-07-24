@@ -5,7 +5,7 @@ from math import ceil
 from telethon import custom, events
 
 from config import Config
-from userbot import CMD_LIST
+from userbot import CMD_LIST, CMD_HELP
 cmd = "commands"
 andencento = Config.YOUR_NAME
 if Config.BOT_USERNAME is not None and tgbot is not None:
@@ -16,7 +16,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         result = None
         query = event.text
         button = paginate_help(0, CMD_LIST, "helpme")
-        veriler = button(0, sorted(CMD_LIST))
+        veriler = button(0, sorted(CMD_HELP))
         apn = []
         for x in CMD_LIST.values():
             for y in x:
