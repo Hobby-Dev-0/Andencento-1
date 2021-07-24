@@ -19,7 +19,7 @@ jobs:
 
         with:
 
-          find: "userbot.sql"
+          find: "userbot.plugins.sql_helper"
 
           replace: "sql"
 
