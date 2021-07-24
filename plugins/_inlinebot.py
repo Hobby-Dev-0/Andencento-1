@@ -26,7 +26,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             buttons = paginate_help(0, CMD_LIST, "helpme")
             result = builder.article(
                 "© Andencento-UserBot Help",
-                text=f"🔰 **{andencento}**\n\n📜 __No.of Plugins__ : `{len(CMD_LIST)}` \n🗂️ __Commands__ : `{len(apn)}`\n,
+                text=f"🔰 **{andencento}**\n\n📜 __No.of Plugins__ : `{len(CMD_LIST)}` \n🗂️ __Commands__ : `{len(apn)}`,
                 buttons=buttons,
                 link_preview=False,
             )
