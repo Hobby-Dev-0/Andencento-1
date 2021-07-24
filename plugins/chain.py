@@ -3,7 +3,7 @@ from telethon.tl.functions.messages import SaveDraftRequest
 from . import *
 
 
-@Andencento.on(Andencento_cmd(pattern="chain$"))
+@Andencento.on(andencento_cmd(pattern="chain$"))
 @Andencento.on(sudo_cmd(pattern="chain$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:

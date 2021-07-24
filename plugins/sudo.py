@@ -10,7 +10,7 @@ heroku_api = "https://api.heroku.com"
 sudousers = os.environ.get("SUDO_USERS", None)
 
 
-@Andencento.on(Andencento_cmd(pattern="sudo"))
+@Andencento.on(andencento_cmd(pattern="sudo"))
 async def sudo(event):
     sudo = "True" if Config.SUDO_USERS else "False"
     users = os.environ.get("SUDO_USERS", None)
@@ -22,7 +22,7 @@ async def sudo(event):
         await eod(event, f"📍 **Sudo :**  `Disabled`", 7)
 
 
-@Andencento.on(Andencento_cmd(pattern="addsudo(?: |$)"))
+@Andencento.on(andencento_cmd(pattern="addsudo(?: |$)"))
 async def add(event):
     ok = await eor(event, "**🚀 Adding Sudo User...**")
     bot = "SUDO_USERS"
@@ -48,7 +48,7 @@ async def add(event):
     heroku_Config[bot] = newsudo
 
 
-@Andencento.on(Andencento_cmd(pattern="rmsudo(?: |$)"))
+@Andencento.on(andencento_cmd(pattern="rmsudo(?: |$)"))
 async def _(event):
     ok = await eor(event, "**🚫 Removing Sudo User...**")
     bot = "SUDO_USERS"

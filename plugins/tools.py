@@ -16,7 +16,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from . import *
 
 
-@Andencento.on(Andencento_cmd(pattern="scan ?(.*)"))
+@Andencento.on(andencento_cmd(pattern="scan ?(.*)"))
 @Andencento.on(sudo_cmd(pattern="scan ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -59,7 +59,7 @@ async def _(event):
                 )
 
 
-@Andencento.on(Andencento_cmd(pattern=r"decode$", outgoing=True))
+@Andencento.on(andencento_cmd(pattern=r"decode$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"decode$", allow_sudo=True))
 async def parseqr(qr_e):
     if not os.path.isdir(Config.TEMP_DIR):
@@ -96,7 +96,7 @@ async def parseqr(qr_e):
         os.remove(downloaded_file_name)
 
 
-@Andencento.on(Andencento_cmd(pattern="barcode ?(.*)"))
+@Andencento.on(andencento_cmd(pattern="barcode ?(.*)"))
 @Andencento.on(sudo_cmd(pattern="barcode ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -148,7 +148,7 @@ async def _(event):
     await userevent.delete()
 
 
-@Andencento.on(Andencento_cmd(pattern=r"makeqr(?: |$)([\s\S]*)", outgoing=True))
+@Andencento.on(andencento_cmd(pattern=r"makeqr(?: |$)([\s\S]*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"makeqr(?: |$)([\s\S]*)", allow_sudo=True))
 async def make_qr(makeqr):
     input_str = makeqr.pattern_match.group(1)
@@ -187,7 +187,7 @@ async def make_qr(makeqr):
     await makeqr.delete()
 
 
-@Andencento.on(Andencento_cmd(pattern="cal (.*)"))
+@Andencento.on(andencento_cmd(pattern="cal (.*)"))
 @Andencento.on(sudo_cmd(pattern="cal (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -218,7 +218,7 @@ async def _(event):
     (end - start).seconds
 
 
-@Andencento.on(Andencento_cmd(pattern="currency (.*)"))
+@Andencento.on(andencento_cmd(pattern="currency (.*)"))
 @Andencento.on(sudo_cmd(pattern="currency (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -255,7 +255,7 @@ async def _(event):
         )
 
 
-@Andencento.on(Andencento_cmd(pattern="currencies$"))
+@Andencento.on(andencento_cmd(pattern="currencies$"))
 @Andencento.on(sudo_cmd(pattern="currencies$", allow_sudo=True))
 async def currencylist(ups):
     if ups.fwd_from:
@@ -269,7 +269,7 @@ async def currencylist(ups):
     await eor(ups, f"**List of some currencies:**\n{hmm}\n")
 
 
-@Andencento.on(Andencento_cmd(pattern="ifsc (.*)"))
+@Andencento.on(andencento_cmd(pattern="ifsc (.*)"))
 @Andencento.on(sudo_cmd(pattern="ifsc (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -286,7 +286,7 @@ async def _(event):
         await eor(event, "`{}`: {}".format(input_str, r.text))
 
 
-@Andencento.on(Andencento_cmd(pattern="color (.*)"))
+@Andencento.on(andencento_cmd(pattern="color (.*)"))
 @Andencento.on(sudo_cmd(pattern="color (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -323,7 +323,7 @@ async def _(event):
         )
 
 
-@Andencento.on(Andencento_cmd(pattern="xkcd ?(.*)"))
+@Andencento.on(andencento_cmd(pattern="xkcd ?(.*)"))
 @Andencento.on(sudo_cmd(pattern="xkcd ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -370,7 +370,7 @@ Year: {}""".format(
         await eod(userevent, "xkcd n.{} not found!".format(xkcd_id))
 
 
-@Andencento.on(Andencento_cmd(pattern="dns (.*)", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="dns (.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="dns (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -394,7 +394,7 @@ async def _(event):
         )
 
 
-@Andencento.on(Andencento_cmd(pattern="url (.*)", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="url (.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="url (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -412,7 +412,7 @@ async def _(event):
         await eod(event, "something is wrong. please try again later.")
 
 
-@Andencento.on(Andencento_cmd(pattern="unshort (.*)", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="unshort (.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="unshort (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:

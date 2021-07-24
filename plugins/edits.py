@@ -4,7 +4,7 @@ import random
 from . import *
 
 
-@Andencento.on(Andencento_cmd(pattern="type (.*)"))
+@Andencento.on(andencento_cmd(pattern="type (.*)"))
 @Andencento.on(sudo_cmd(pattern="type (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -37,7 +37,7 @@ async def _(event):
         await asyncio.sleep(DELAY_BETWEEN_EDITS)
 
 
-@Andencento.on(Andencento_cmd(pattern="emoji (.*)"))
+@Andencento.on(andencento_cmd(pattern="emoji (.*)"))
 @Andencento.on(sudo_cmd(pattern="emoji (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -63,7 +63,7 @@ async def _(event):
             await event.edit(animation_chars[i % 2])
 
 
-@Andencento.on(Andencento_cmd(pattern=f"gendar$", outgoing=True))
+@Andencento.on(andencento_cmd(pattern=f"gendar$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=f"gendar$", allow_sudo=True))
 async def metoo(e):
     if e.fwd_from:
@@ -72,7 +72,7 @@ async def metoo(e):
     await edit_or_reply(e, txt)
 
 
-@Andencento.on(Andencento_cmd(pattern=f"shrug$", outgoing=True))
+@Andencento.on(andencento_cmd(pattern=f"shrug$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=f"shrug$", allow_sudo=True))
 async def metoo(e):
     if e.fwd_from:
@@ -81,7 +81,7 @@ async def metoo(e):
     await edit_or_reply(e, txt)
 
 
-@Andencento.on(Andencento_cmd(pattern=f"doge", outgoing=True))
+@Andencento.on(andencento_cmd(pattern=f"doge", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=f"doge", allow_sudo=True))
 async def metoo(e):
     if e.fwd_from:
@@ -90,7 +90,7 @@ async def metoo(e):
     await edit_or_reply(e, txt)
 
 
-@Andencento.on(Andencento_cmd(pattern=f"mesed$", outgoing=True))
+@Andencento.on(andencento_cmd(pattern=f"mesed$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=f"mesed$", allow_sudo=True))
 async def metoo(e):
     if e.fwd_from:
@@ -99,7 +99,7 @@ async def metoo(e):
     await edit_or_reply(e, txt)
 
 
-@Andencento.on(Andencento_cmd(pattern=f"medead$", outgoing=True))
+@Andencento.on(andencento_cmd(pattern=f"medead$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=f"medead$", allow_sudo=True))
 async def metoo(e):
     if e.fwd_from:
@@ -108,7 +108,7 @@ async def metoo(e):
     await edit_or_reply(e, txt)
 
 
-@Andencento.on(Andencento_cmd(pattern=f"confused$", outgoing=True))
+@Andencento.on(andencento_cmd(pattern=f"confused$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=f"confused$", allow_sudo=True))
 async def metoo(e):
     if e.fwd_from:
@@ -117,7 +117,7 @@ async def metoo(e):
     await edit_or_reply(e, txt)
 
 
-@Andencento.on(Andencento_cmd(pattern=f"lobb$", outgoing=True))
+@Andencento.on(andencento_cmd(pattern=f"lobb$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=f"lobb$", allow_sudo=True))
 async def metoo(e):
     if e.fwd_from:
@@ -126,7 +126,7 @@ async def metoo(e):
     await edit_or_reply(e, txt)
 
 
-@Andencento.on(Andencento_cmd(pattern=f"wut$", outgoing=True))
+@Andencento.on(andencento_cmd(pattern=f"wut$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=f"wut$", allow_sudo=True))
 async def metoo(e):
     if e.fwd_from:
@@ -135,7 +135,7 @@ async def metoo(e):
     await edit_or_reply(e, txt)
 
 
-@Andencento.on(Andencento_cmd(pattern=f"wavee$", outgoing=True))
+@Andencento.on(andencento_cmd(pattern=f"wavee$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=f"wavee$", allow_sudo=True))
 async def metoo(e):
     if e.fwd_from:
@@ -144,7 +144,7 @@ async def metoo(e):
     await edit_or_reply(e, txt)
 
 
-@Andencento.on(Andencento_cmd(pattern=f"hehe$", outgoing=True))
+@Andencento.on(andencento_cmd(pattern=f"hehe$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=f"hehe$", allow_sudo=True))
 async def metoo(e):
     if e.fwd_from:

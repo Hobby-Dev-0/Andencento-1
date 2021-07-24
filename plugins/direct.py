@@ -11,7 +11,7 @@ from humanize import naturalsize
 from . import *
 
 
-@Andencento.on(Andencento_cmd(outgoing=True, pattern=r"direct(?: |$)([\s\S]*)"))
+@Andencento.on(andencento_cmd(outgoing=True, pattern=r"direct(?: |$)([\s\S]*)"))
 @Andencento.on(sudo_cmd(allow_sudo=True, pattern=r"direct(?: |$)([\s\S]*)"))
 async def direct_link_generator(request):
     if request.fwd_from:

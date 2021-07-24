@@ -88,7 +88,7 @@ def yaml_format(obj, indent=0):
     return "".join(result)
 
 
-@Andencento.on(Andencento_cmd(pattern=r"yaml", outgoing=True))
+@Andencento.on(andencento_cmd(pattern=r"yaml", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"yaml", allow_sudo=True))
 async def _(event):
     if not event.message.is_reply:
@@ -98,8 +98,8 @@ async def _(event):
     await edit_or_reply(event, yaml_text, parse_mode=parse_pre)
 
 
-@Andencento.on(Andencento_cmd(pattern="json$", outgoing=True))
-@Andencento.on(Andencento_cmd(pattern="json$", allow_sudo=True))
+@Andencento.on(andencento_cmd(pattern="json$", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="json$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

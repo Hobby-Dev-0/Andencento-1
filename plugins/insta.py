@@ -3,7 +3,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from . import *
 
 
-@Andencento.on(Andencento_cmd(pattern="insta (.*)"))
+@Andencento.on(andencento_cmd(pattern="insta (.*)"))
 @Andencento.on(sudo_cmd(pattern="insta (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:

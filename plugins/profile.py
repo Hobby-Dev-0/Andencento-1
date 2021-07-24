@@ -26,7 +26,7 @@ PROFILE_IMAGE = "https://telegra.ph/file/9f0638dbfa028162a8682.jpg"
 # ===============================================================
 
 
-@Andencento.on(Andencento_cmd(pattern="offline$", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="offline$", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -68,7 +68,7 @@ async def _(event):
         await eod(event, str(e))
 
 
-@Andencento.on(Andencento_cmd(pattern="online$", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="online$", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -109,7 +109,7 @@ async def _(event):
         await eod(event, str(e))
 
 
-@Andencento.on(Andencento_cmd(pattern="pbio (.*)"))
+@Andencento.on(andencento_cmd(pattern="pbio (.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -121,7 +121,7 @@ async def _(event):
         await event.edit(str(e))
 
 
-@Andencento.on(Andencento_cmd(pattern="pname (.*)"))
+@Andencento.on(andencento_cmd(pattern="pname (.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -141,7 +141,7 @@ async def _(event):
         await event.edit(str(e))
 
 
-@Andencento.on(Andencento_cmd(pattern="ppic"))
+@Andencento.on(andencento_cmd(pattern="ppic"))
 async def _(event):
     if event.fwd_from:
         return
@@ -170,7 +170,7 @@ async def _(event):
         logger.warn(str(e))
 
 
-@Andencento.on(Andencento_cmd(outgoing=True, pattern="username (.*)"))
+@Andencento.on(andencento_cmd(outgoing=True, pattern="username (.*)"))
 async def update_username(username):
     newusername = username.pattern_match.group(1)
     try:
@@ -180,7 +180,7 @@ async def update_username(username):
         await eod(username, USERNAME_TAKEN)
 
 
-@Andencento.on(Andencento_cmd(outgoing=True, pattern="count$"))
+@Andencento.on(andencento_cmd(outgoing=True, pattern="count$"))
 async def count(event):
     u = 0
     g = 0
@@ -216,7 +216,7 @@ async def count(event):
     await event.edit(result)
 
 
-@Andencento.on(Andencento_cmd(outgoing=True, pattern=r"delpfp"))
+@Andencento.on(andencento_cmd(outgoing=True, pattern=r"delpfp"))
 async def remove_profilepic(delpfp):
     group = delpfp.text[8:]
     if group == "all":
@@ -245,7 +245,7 @@ async def remove_profilepic(delpfp):
     )
 
 
-@Andencento.on(Andencento_cmd(pattern="myusernames$"))
+@Andencento.on(andencento_cmd(pattern="myusernames$"))
 async def _(event):
     if event.fwd_from:
         return

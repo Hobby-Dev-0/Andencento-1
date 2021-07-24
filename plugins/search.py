@@ -3,7 +3,7 @@ import requests
 from . import *
 
 
-@Andencento.on(Andencento_cmd(pattern="ytube (.*)", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="ytube (.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="ytube (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -26,7 +26,7 @@ async def _(event):
         await eod(event, "Something went wrong. Please try again later.")
 
 
-@Andencento.on(Andencento_cmd(pattern="ddg (.*)", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="ddg (.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="ddg (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -49,7 +49,7 @@ async def _(event):
         await eod(event, "Something went wrong. Please try again later.")
 
 
-@Andencento.on(Andencento_cmd(pattern="altn (.*)", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="altn (.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="altn (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -70,7 +70,7 @@ async def _(event):
         await eod(event, "Something went wrong. Please try again later.")
 
 
-@Andencento.on(Andencento_cmd(pattern="var (.*)", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="var (.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="var (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -93,7 +93,7 @@ async def _(event):
         await eod(event, "Something went wrong. Please try again later.")
 
 
-@Andencento.on(Andencento_cmd(pattern="lmlog (.*)", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="lmlog (.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="lmlog (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -114,7 +114,7 @@ async def _(event):
         await eod(event, "Something went wrong. Please try again later.")
 
 
-@Andencento.on(Andencento_cmd(pattern="hacc (.*)", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="hacc (.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="hacc (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -135,7 +135,7 @@ async def _(event):
         await eod(event, "Something went wrong. Please try again later.")
 
 
-@Andencento.on(Andencento_cmd(pattern="lmkp (.*)", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="lmkp (.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="lmkp (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -156,7 +156,7 @@ async def _(event):
         await eod(event, "Something went wrong. Please try again later.")
 
 
-@Andencento.on(Andencento_cmd(pattern="gem (.*)", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="gem (.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="gem (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -177,7 +177,7 @@ async def _(event):
         await eod(event, "Something went wrong. Please try again later.")
 
 
-@Andencento.on(Andencento_cmd(pattern="rchiv (.*)", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="rchiv (.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="rchiv (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:

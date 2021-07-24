@@ -10,7 +10,7 @@ from . import *
 PICS_STR = []
 
 
-@Andencento.on(Andencento_cmd(pattern=r"logo ?(.*)"))
+@Andencento.on(andencento_cmd(pattern=r"logo ?(.*)"))
 @Andencento.on(sudo_cmd(pattern=r"logo ?(.*)", allow_sudo=True))
 async def lg1(userevent):
     event = await eor(userevent, "`Processing.....`")

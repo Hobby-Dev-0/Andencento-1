@@ -5,7 +5,7 @@ import traceback
 from . import *
 
 
-@Andencento.on(Andencento_cmd(pattern="calc (.*)"))
+@Andencento.on(andencento_cmd(pattern="calc (.*)"))
 @Andencento.on(sudo_cmd(pattern="calc (.*)", allow_sudo=True))
 async def _(car):
     if car.fwd_from:

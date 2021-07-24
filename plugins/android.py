@@ -13,7 +13,7 @@ DEVICES_DATA = (
 )
 
 
-@Andencento.on(Andencento_cmd(pattern=r"magisk"))
+@Andencento.on(andencento_cmd(pattern=r"magisk"))
 @Andencento.on(sudo_cmd(pattern=r"magisk", allow_sudo=True))
 async def _(magisk):
     if magisk.fwd_from:
@@ -42,7 +42,7 @@ async def _(magisk):
     await eor(magisk, releases)
 
 
-@Andencento.on(Andencento_cmd(outgoing=True, pattern=r"device(?: |$)(\S*)"))
+@Andencento.on(andencento_cmd(outgoing=True, pattern=r"device(?: |$)(\S*)"))
 @Andencento.on(sudo_cmd(pattern=r"device(?: |$)(\S*)", allow_sudo=True))
 async def device_info(request):
     if request.fwd_from:
@@ -78,7 +78,7 @@ async def device_info(request):
 
 
 @Andencento.on(
-    Andencento_cmd(outgoing=True, pattern=r"codename(?: |)([\S]*)(?: |)([\s\S]*)")
+    andencento_cmd(outgoing=True, pattern=r"codename(?: |)([\S]*)(?: |)([\s\S]*)")
 )
 @Andencento.on(
     sudo_cmd(pattern=r"codename(?: |)([\S]*)(?: |)([\s\S]*)", allow_sudo=True)
@@ -128,7 +128,7 @@ async def codename_info(request):
     await edit_or_reply(request, reply)
 
 
-@Andencento.on(Andencento_cmd(outgoing=True, pattern=r"specs(?: |)([\S]*)(?: |)([\s\S]*)"))
+@Andencento.on(andencento_cmd(outgoing=True, pattern=r"specs(?: |)([\S]*)(?: |)([\s\S]*)"))
 @Andencento.on(sudo_cmd(pattern=r"specs(?: |)([\S]*)(?: |)([\s\S]*)", allow_sudo=True))
 async def devices_specifications(request):
     if request.fwd_from:
@@ -193,7 +193,7 @@ async def devices_specifications(request):
     await edit_or_reply(request, reply)
 
 
-@Andencento.on(Andencento_cmd(outgoing=True, pattern=r"twrp(?: |$)(\S*)"))
+@Andencento.on(andencento_cmd(outgoing=True, pattern=r"twrp(?: |$)(\S*)"))
 @Andencento.on(sudo_cmd(pattern=r"twrp(?: |$)(\S*)", allow_sudo=True))
 async def twrp(request):
     if request.fwd_from:

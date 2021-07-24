@@ -7,7 +7,7 @@ from selenium import webdriver
 from . import *
 
 
-@Andencento.on(Andencento_cmd(pattern="(webshot|screenshot) (.*)", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="(webshot|screenshot) (.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="(webshot|screenshot) (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:

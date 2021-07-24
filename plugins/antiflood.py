@@ -14,7 +14,7 @@ ANTI_FLOOD_WARN_MODE = ChatBannedRights(
 )
 
 
-@Andencento.on(Andencento_cmd(incoming=True))
+@Andencento.on(andencento_cmd(incoming=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -57,7 +57,7 @@ because he reached the defined flood limit.""".format(
         )
 
 
-@Andencento.on(Andencento_cmd(pattern="setflood(?: |$)(.*)"))
+@Andencento.on(andencento_cmd(pattern="setflood(?: |$)(.*)"))
 @Andencento.on(sudo_cmd(pattern="setflood(?: |$)(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:

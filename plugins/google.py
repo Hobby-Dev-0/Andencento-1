@@ -22,7 +22,7 @@ def progress(current, total):
     )
 
 
-@Andencento.on(Andencento_cmd(pattern="wikipedia (.*)"))
+@Andencento.on(andencento_cmd(pattern="wikipedia (.*)"))
 @Andencento.on(sudo_cmd(pattern="wikipedia (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -41,7 +41,7 @@ async def _(event):
     )
 
 
-@Andencento.on(Andencento_cmd(pattern="watch (.*)"))
+@Andencento.on(andencento_cmd(pattern="watch (.*)"))
 @Andencento.on(sudo_cmd(pattern="watch (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -91,7 +91,7 @@ async def _(event):
     await event.delete()
 
 
-@Andencento.on(Andencento_cmd(pattern="google (.*)", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="google (.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="google (.*)", allow_sudo=True))
 async def google(event):
     input_str = event.pattern_match.group(1)
@@ -119,7 +119,7 @@ async def google(event):
     see.clear()
 
 
-@Andencento.on(Andencento_cmd(pattern="img (.*)", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="img (.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="img (.*)", allow_sudo=True))
 async def img(event):
     sim = event.pattern_match.group(1)
@@ -148,7 +148,7 @@ async def img(event):
     await user.delete()
 
 
-@Andencento.on(Andencento_cmd(pattern="reverse"))
+@Andencento.on(andencento_cmd(pattern="reverse"))
 @Andencento.on(sudo_cmd(pattern="reverse", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -208,7 +208,7 @@ More Info: Open this <a href="{the_location}">Link</a> in {ms} seconds""".format
     await user.edit(OUTPUT_STR, parse_mode="HTML", link_preview=False)
 
 
-@Andencento.on(Andencento_cmd(pattern="gps ?(.*)"))
+@Andencento.on(andencento_cmd(pattern="gps ?(.*)"))
 @Andencento.on(sudo_cmd(pattern="gps ?(.*)", allow_sudo=True))
 async def gps(event):
     if event.fwd_from:

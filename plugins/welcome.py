@@ -68,7 +68,7 @@ async def _(event):  # sourcery no-metrics
         update_welcome(event.chat_id, current_message.id)
 
 
-@Andencento.on(Andencento_cmd(pattern="savewelcome(?: |$)(.*)"))
+@Andencento.on(andencento_cmd(pattern="savewelcome(?: |$)(.*)"))
 @Andencento.on(sudo_cmd(pattern="savewelcome(?: |$)(.*)", allow_sudo=True))
 async def save_welcome(event):
     msg = await event.get_reply_message()
@@ -98,7 +98,7 @@ async def save_welcome(event):
     await eod(event, "Error while setting welcome in this group")
 
 
-@Andencento.on(Andencento_cmd(pattern="cleanwelcome$"))
+@Andencento.on(andencento_cmd(pattern="cleanwelcome$"))
 @Andencento.on(sudo_cmd(pattern="cleanwelcome$", allow_sudo=True))
 async def del_welcome(event):
     if rm_welcome(event.chat_id) is True:
@@ -107,7 +107,7 @@ async def del_welcome(event):
         await eod(event, "To delete a welcome note you need to save one first.", 7)
 
 
-@Andencento.on(Andencento_cmd(pattern="showwelcome$"))
+@Andencento.on(andencento_cmd(pattern="showwelcome$"))
 @Andencento.on(sudo_cmd(pattern="showwelcome$", allow_sudo=True))
 async def getwelcome(event):
     cws = get_current_welcome(event.chat_id)
@@ -122,7 +122,7 @@ async def getwelcome(event):
         await event.reply(cws.reply)
 
 
-@Andencento.on(Andencento_cmd(pattern="welcome_note$"))
+@Andencento.on(andencento_cmd(pattern="welcome_note$"))
 @Andencento.on(sudo_cmd(pattern="welcome_note$", allow_sudo=True))
 async def note(event):
     await eor(event, WELCOME_FORMAT)

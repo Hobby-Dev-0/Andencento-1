@@ -9,7 +9,7 @@ from . import *
 FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
 
 
-@Andencento.on(Andencento_cmd(pattern="time ?(.*)", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="time ?(.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="time ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:

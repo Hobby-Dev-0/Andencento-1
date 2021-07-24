@@ -19,7 +19,7 @@ global last_triggered_filters
 last_triggered_filters = {}  # pylint:disable=E0602
 
 
-@Andencento.on(Andencento_cmd(incoming=True))
+@Andencento.on(andencento_cmd(incoming=True))
 async def on_snip(event):
     global last_triggered_filters
     name = event.raw_text
@@ -58,7 +58,7 @@ async def on_snip(event):
                 last_triggered_filters[event.chat_id].remove(name)
 
 
-@Andencento.on(Andencento_cmd(pattern=r"filter (.*)"))
+@Andencento.on(andencento_cmd(pattern=r"filter (.*)"))
 @Andencento.on(sudo_cmd(pattern=r"filter (.*)", allow_sudo=True))
 async def on_snip_save(event):
     if event.fwd_from:
@@ -99,7 +99,7 @@ async def on_snip_save(event):
         )
 
 
-@Andencento.on(Andencento_cmd(pattern="filters$"))
+@Andencento.on(andencento_cmd(pattern="filters$"))
 @Andencento.on(sudo_cmd(pattern="filters$", allow_sudo=True))
 async def on_snip_list(event):
     if event.fwd_from:
@@ -127,7 +127,7 @@ async def on_snip_list(event):
         await eod(event, OUT_STR)
 
 
-@Andencento.on(Andencento_cmd(pattern="stop (.*)"))
+@Andencento.on(andencento_cmd(pattern="stop (.*)"))
 @Andencento.on(sudo_cmd(pattern="stop (.*)", allow_sudo=True))
 async def on_snip_delete(event):
     if event.fwd_from:
@@ -137,7 +137,7 @@ async def on_snip_delete(event):
     await eod(event, f"Filter `{name}` deleted successfully")
 
 
-@Andencento.on(Andencento_cmd(pattern="rmallfilters$"))
+@Andencento.on(andencento_cmd(pattern="rmallfilters$"))
 @Andencento.on(sudo_cmd(pattern="rmallfilters$", allow_sudo=True))
 async def on_all_snip_delete(event):
     if event.fwd_from:

@@ -5,7 +5,7 @@ from subprocess import run as runapp
 from . import *
 
 
-@Andencento.on(Andencento_cmd(pattern="hash (.*)", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="hash (.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="hash (.*)", allow_sudo=True))
 @errors_handler
 async def gethash(hash_q):
@@ -54,7 +54,7 @@ async def gethash(hash_q):
         await event.delete()
 
 
-@Andencento.on(Andencento_cmd(pattern="b64 (en|de) (.*)", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="b64 (en|de) (.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="b64 (en|de) (.*)", allow_sudo=True))
 @errors_handler
 async def endecrypt(query):

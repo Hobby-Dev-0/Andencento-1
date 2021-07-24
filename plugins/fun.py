@@ -7,7 +7,7 @@ from telethon.tl.types import MessageEntityMentionName
 from . import *
 
 
-@Andencento.on(Andencento_cmd(pattern="slap ?(.*)", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="slap ?(.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="slap ?(.*)", allow_sudo=True))
 async def who(event):
     if event.fwd_from:
@@ -81,104 +81,104 @@ async def slap(replied_user, event):
     return caption
 
 
-@Andencento.on(Andencento_cmd(pattern=f"randi$", outgoing=True))
+@Andencento.on(andencento_cmd(pattern=f"randi$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=f"randi$", allow_sudo=True))
 async def rendi(e):
     txt = random.choice(RENDISTR)
     await eor(e, txt)
 
 
-@Andencento.on(Andencento_cmd(pattern=f"habuse$", outgoing=True))
+@Andencento.on(andencento_cmd(pattern=f"habuse$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=f"habuse$", allow_sudo=True))
 async def thenus(e):
     txt = random.choice(THANOS_STRINGS)
     await eor(e, txt)
 
 
-@Andencento.on(Andencento_cmd(pattern=f"fuk$", outgoing=True))
+@Andencento.on(andencento_cmd(pattern=f"fuk$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=f"fuk$", allow_sudo=True))
 async def tapatap(e):
     txt = random.choice(FUK_STRINGS)
     await eor(e, txt)
 
 
-@Andencento.on(Andencento_cmd(pattern=f"chu$", outgoing=True))
+@Andencento.on(andencento_cmd(pattern=f"chu$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=f"chu$", allow_sudo=True))
 async def chut(e):
     txt = random.choice(CHU_STRINGS)
     await eor(e, txt)
 
 
-@Andencento.on(Andencento_cmd(pattern=f"noob$", outgoing=True))
+@Andencento.on(andencento_cmd(pattern=f"noob$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=f"noob$", allow_sudo=True))
 async def nub(e):
     txt = random.choice(NOOBSTR)
     await eor(e, txt)
 
 
-@Andencento.on(Andencento_cmd(pattern=f"run$", outgoing=True))
+@Andencento.on(andencento_cmd(pattern=f"run$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=f"run$", allow_sudo=True))
 async def metoo(e):
     txt = random.choice(RUNSREACTS)
     await eor(e, txt)
 
 
-@Andencento.on(Andencento_cmd(pattern=f"gali$", outgoing=True))
+@Andencento.on(andencento_cmd(pattern=f"gali$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=f"gali$", allow_sudo=True))
 async def metoo(e):
     txt = random.choice(GAALI_STR)
     await eor(e, txt)
 
 
-@Andencento.on(Andencento_cmd(pattern=f"rape$", outgoing=True))
+@Andencento.on(andencento_cmd(pattern=f"rape$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=f"rape$", allow_sudo=True))
 async def metoo(e):
     txt = random.choice(RAPE_STRINGS)
     await eor(e, txt)
 
 
-@Andencento.on(Andencento_cmd(pattern=f"abuse$", outgoing=True))
+@Andencento.on(andencento_cmd(pattern=f"abuse$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=f"abuse$", allow_sudo=True))
 async def metoo(e):
     txt = random.choice(ABUSE_STRINGS)
     await eor(e, txt)
 
 
-@Andencento.on(Andencento_cmd(pattern=f"gey$", outgoing=True))
+@Andencento.on(andencento_cmd(pattern=f"gey$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=f"gey$", allow_sudo=True))
 async def metoo(e):
     txt = random.choice(GEY_STRINGS)
     await eor(e, txt)
 
 
-@Andencento.on(Andencento_cmd(pattern=f"piro$", outgoing=True))
+@Andencento.on(andencento_cmd(pattern=f"piro$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=f"piro$", allow_sudo=True))
 async def metoo(e):
     txt = random.choice(PRO_STRINGS)
     await eor(e, txt)
 
 
-@Andencento.on(Andencento_cmd(pattern=f"insult$", outgoing=True))
+@Andencento.on(andencento_cmd(pattern=f"insult$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=f"insult$", allow_sudo=True))
 async def metoo(e):
     txt = random.choice(INSULT_STRINGS)
     await eor(e, txt)
 
 
-@Andencento.on(Andencento_cmd(pattern=f"hiabuse$", outgoing=True))
+@Andencento.on(andencento_cmd(pattern=f"hiabuse$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=f"hiabuse$", allow_sudo=True))
 async def metoo(e):
     txt = random.choice(HIABUSE_STR)
     await eor(e, txt)
 
 
-@Andencento.on(Andencento_cmd(pattern="cry$", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="cry$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="cry$", allow_sudo=True))
 async def cry(e):
     await eor(e, random.choice(CRI))
 
 
-@Andencento.on(Andencento_cmd(pattern="cp(?: |$)(.*)", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="cp(?: |$)(.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="cp(?:|$)(.*)", allow_sudo=True))
 async def copypasta(cp_e):
     if not cp_e.text[0].isalpha() and cp_e.text[0] not in ("/", "#", "@", "!"):
@@ -212,7 +212,7 @@ async def copypasta(cp_e):
         await edit_or_reply(cp_e, reply_text)
 
 
-@Andencento.on(Andencento_cmd(pattern="owo(?: |$)(.*)", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="owo(?: |$)(.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="owo(?: |$)(.*)", allow_sudo=True))
 async def faces(owo):
     """UwU"""
@@ -237,13 +237,13 @@ async def faces(owo):
         await edit_or_reply(owo, reply_text)
 
 
-@Andencento.on(Andencento_cmd(pattern="react$", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="react$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="react$", allow_sudo=True))
 async def react_meme(react):
     await edit(react, random.choice(FACEREACTS))
 
 
-@Andencento.on(Andencento_cmd(pattern="clap(?: |$)(.*)", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="clap(?: |$)(.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="clap(?: |$)(.*)", allow_sudo=True))
 async def claptext(memereview):
     """Praise people!"""

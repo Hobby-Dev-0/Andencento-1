@@ -4,7 +4,7 @@ import subprocess
 from . import *
 
 
-@Andencento.on(Andencento_cmd(pattern=r"getc"))
+@Andencento.on(andencento_cmd(pattern=r"getc"))
 @Andencento.on(sudo_cmd(pattern=r"getc", allow_sudo=True))
 async def get_media(event):
     if event.fwd_from:
@@ -35,7 +35,7 @@ async def get_media(event):
     await event.edit("Downloaded " + output + " files.")
 
 
-@Andencento.on(Andencento_cmd(pattern=r"geta"))
+@Andencento.on(andencento_cmd(pattern=r"geta"))
 @Andencento.on(sudo_cmd(pattern=r"geta", allow_sudo=True))
 async def get_media(event):
     if event.fwd_from:

@@ -4,7 +4,7 @@ from PyDictionary import PyDictionary
 from . import *
 
 
-@Andencento.on(Andencento_cmd(pattern="ud (.*)"))
+@Andencento.on(andencento_cmd(pattern="ud (.*)"))
 @Andencento.on(sudo_cmd(pattern="ud (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -23,7 +23,7 @@ async def _(event):
         await edit_or_reply(event, "No result found for **" + word + "**")
 
 
-@Andencento.on(Andencento_cmd(pattern="meaning (.*)"))
+@Andencento.on(andencento_cmd(pattern="meaning (.*)"))
 @Andencento.on(sudo_cmd(pattern="meaning (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
