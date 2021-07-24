@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "bot.on"
+          find: "admin_cmd"
 
-          replace: "Andencento.on"
+          replace: "Andencento_cmd"
 
       - name: Create Pull Request
 
