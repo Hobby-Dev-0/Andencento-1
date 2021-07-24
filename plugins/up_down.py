@@ -15,7 +15,7 @@ from telethon.tl.types import DocumentAttributeVideo
 from . import *
 
 
-@Andencento.on(andencento_cmd(pattern=r"webup ?(.*)", outgoing=True))
+@Andencento.on(admin_cmd(pattern=r"webup ?(.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"webup ?(.*)", allow_sudo=True))
 async def labstack(event):
     if event.fwd_from:
@@ -76,7 +76,7 @@ async def labstack(event):
     )
 
 
-@Andencento.on(andencento_cmd(pattern=r"upld_dir (.*)", outgoing=True))
+@Andencento.on(admin_cmd(pattern=r"upld_dir (.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"upld_dir (.*)", allow_sudo=True))
 async def uploadir(udir_event):
     """For .uploadir command, allows you to upload everything from a folder in the server"""
@@ -164,7 +164,7 @@ async def uploadir(udir_event):
         await udir_event.edit("404: Directory Not Found")
 
 
-@Andencento.on(andencento_cmd(pattern=r"upload (.*)", outgoing=True))
+@Andencento.on(admin_cmd(pattern=r"upload (.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"upload (.*)", allow_sudo=True))
 async def upload(u_event):
     """For .upload command, allows you to upload a file from the userbot's server"""
@@ -243,7 +243,7 @@ def extract_w_h(file):
         return width, height
 
 
-@Andencento.on(andencento_cmd(pattern=r"upld_as(stream|vn|all) (.*)", outgoing=True))
+@Andencento.on(admin_cmd(pattern=r"upld_as(stream|vn|all) (.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"upld_as (stream|vn|all) (.*)", allow_sudo=True))
 async def uploadas(uas_event):
     """For .uploadas command, allows you to specify some arguments for upload."""
@@ -337,7 +337,7 @@ async def uploadas(uas_event):
         await uas_event.edit("404: File Not Found")
 
 
-@Andencento.on(andencento_cmd(pattern="download(?: |$)(.*)", outgoing=True))
+@Andencento.on(admin_cmd(pattern="download(?: |$)(.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="download(?: |$)(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:

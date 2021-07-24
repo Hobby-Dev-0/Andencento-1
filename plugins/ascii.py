@@ -3,7 +3,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from . import *
 
 
-@Andencento.on(andencento_cmd(pattern="ascii (.*)"))
+@Andencento.on(admin_cmd(pattern="ascii (.*)"))
 @Andencento.on(sudo_cmd(pattern="ascii (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -41,7 +41,7 @@ async def _(event):
     )
 
 
-@Andencento.on(andencento_cmd(pattern="line (.*)"))
+@Andencento.on(admin_cmd(pattern="line (.*)"))
 @Andencento.on(sudo_cmd(pattern="line (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:

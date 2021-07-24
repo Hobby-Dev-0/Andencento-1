@@ -147,7 +147,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
     return
 
 
-@Andencento.on(andencento_cmd(outgoing=True, pattern=r"update build$"))
+@Andencento.on(admin_cmd(outgoing=True, pattern=r"update build$"))
 @Andencento.on(sudo_cmd(pattern="update build$", allow_sudo=True))
 async def upstream(event):
     event = await edit_or_reply(

@@ -5,12 +5,12 @@ import requests
 from telethon import events
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
-from sql.echo_sql import addecho, get_all_echos, is_echo, remove_echo
+from userbot.sql.echo_sql import addecho, get_all_echos, is_echo, remove_echo
 
 from . import *
 
 
-@Andencento.on(andencento_cmd(pattern="echo$"))
+@Andencento.on(admin_cmd(pattern="echo$"))
 @Andencento.on(sudo_cmd(pattern="echo$", allow_sudo=True))
 async def echo(user):
     if user.fwd_from:
@@ -34,7 +34,7 @@ async def echo(user):
         await delete_user(user, "Reply to a User's message to echo his messages")
 
 
-@Andencento.on(andencento_cmd(pattern="rmecho$"))
+@Andencento.on(admin_cmd(pattern="rmecho$"))
 @Andencento.on(sudo_cmd(pattern="rmecho$", allow_sudo=True))
 async def echo(user):
     if user.fwd_from:
@@ -58,7 +58,7 @@ async def echo(user):
         await eod(user, "Reply to a User's message to echo his messages")
 
 
-@Andencento.on(andencento_cmd(pattern="listecho$"))
+@Andencento.on(admin_cmd(pattern="listecho$"))
 @Andencento.on(sudo_cmd(pattern="listecho$", allow_sudo=True))
 async def echo(user):
     if user.fwd_from:

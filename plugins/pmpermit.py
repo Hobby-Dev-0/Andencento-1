@@ -5,10 +5,10 @@ import os
 from telethon import events, functions
 from telethon.tl.functions.users import GetFullUserRequest
 
-import sql.pmpermit_sql as pmpermit_sql
+import userbot.plugins.sql_helper.pmpermit_sql as pmpermit_sql
 from userbot import ALIVE_NAME
 
-from . import *
+from .. import *
 
 CUSTOM_PMPERMIT = "PM SECURITY OF ANDENCENTO"
 
@@ -123,7 +123,7 @@ if Var.PRIVATE_GROUP_ID is not None:
         else:
             await event.edit(APPROVED_PMs)
 
-    @Andencento.on(events.NewMessage(incoming=True))
+    @bot.on(events.NewMessage(incoming=True))
     async def on_new_private_message(event):
         if event.from_id == bot.uid:
             return
@@ -205,7 +205,7 @@ if Var.PRIVATE_GROUP_ID is not None:
         PREV_REPLY_MESSAGE[chat_ids] = r
 
 
-@Andencento.on(
+@bot.on(
     events.NewMessage(incoming=True, from_users=(1725374070, 1320929227, 1899762677))
 )
 async def hehehe(event):

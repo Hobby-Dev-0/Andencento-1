@@ -4,7 +4,7 @@ from telethon.tl.types import MessageEntityMentionName
 from . import *
 
 
-@Andencento.on(andencento_cmd(pattern="create (b|g|c) (.*)"))  # pylint:disable=E0602
+@Andencento.on(admin_cmd(pattern="create (b|g|c) (.*)"))  # pylint:disable=E0602
 @Andencento.on(sudo_cmd(pattern="create (b|g|c) (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -67,7 +67,7 @@ async def _(event):
         await event.edit(f"Read `{hl}plinfo create` to know how to use me")
 
 
-@Andencento.on(andencento_cmd(pattern="link(?: |$)(.*)", outgoing=True))
+@Andencento.on(admin_cmd(pattern="link(?: |$)(.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="link(?: |$)(.*)", allow_sudo=True))
 async def permalink(mention):
     if mention.fwd_from:

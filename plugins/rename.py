@@ -36,7 +36,7 @@ def get_video_thumb(file, output=None, width=90):
         return output
 
 
-@Andencento.on(andencento_cmd(pattern="rename (.*)", outgoing=True))
+@Andencento.on(admin_cmd(pattern="rename (.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="rename (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -69,7 +69,7 @@ async def _(event):
         await eod(user, f"Syntax `{hl}rename file.name` as reply to a Telegram media")
 
 
-@Andencento.on(andencento_cmd(pattern="rnupload (.*)", outgoing=True))
+@Andencento.on(admin_cmd(pattern="rnupload (.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="rnupload (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -119,7 +119,7 @@ async def _(event):
         )
 
 
-@Andencento.on(andencento_cmd(pattern="rnsupload (.*)", outgoing=True))
+@Andencento.on(admin_cmd(pattern="rnsupload (.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="rnsupload (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:

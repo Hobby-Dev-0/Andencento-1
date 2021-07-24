@@ -3,97 +3,97 @@ import random
 from . import *
 
 
-@Andencento.on(andencento_cmd(pattern=r"sing$", outgoing=True))
+@Andencento.on(admin_cmd(pattern=r"sing$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"sing$", allow_sudo=True))
 async def _(e):
     txt = random.choice(SONGS)
     await eor(e, txt)
 
 
-@Andencento.on(andencento_cmd(pattern=f"hps$", outgoing=True))
+@Andencento.on(admin_cmd(pattern=f"hps$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=f"hps$", allow_sudo=True))
 async def _(e):
     txt = random.choice(HARRY)
     await eor(e, txt)
 
 
-@Andencento.on(andencento_cmd(pattern=f"gott$", outgoing=True))
+@Andencento.on(admin_cmd(pattern=f"gott$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=f"gott$", allow_sudo=True))
 async def _(e):
     txt = random.choice(GOTT)
     await eor(e, txt)
 
 
-@Andencento.on(andencento_cmd(pattern=f"gotm$", outgoing=True))
+@Andencento.on(admin_cmd(pattern=f"gotm$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=f"gotm$", allow_sudo=True))
 async def _(e):
     txt = random.choice(GOTM)
     await eor(e, txt, link_preview=True)
 
 
-@Andencento.on(andencento_cmd(pattern="bello$", outgoing=True))
+@Andencento.on(admin_cmd(pattern="bello$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="bello$", allow_sudo=True))
 async def _(e):
     txt = random.choice(BELLO)
     await eor(e, txt)
 
 
-@Andencento.on(andencento_cmd(pattern=r"tip$", outgoing=True))
+@Andencento.on(admin_cmd(pattern=r"tip$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"tip$", allow_sudo=True))
 async def _(e):
     txt = random.choice(TIPS)
     await eor(e, txt)
 
 
-@Andencento.on(andencento_cmd(pattern=r"qt$"))
+@Andencento.on(admin_cmd(pattern=r"qt$"))
 @Andencento.on(sudo_cmd(pattern=r"qt$", allow_sudo=True))
 async def _(e):
     txt = random.choice(QT)
     await eor(e, txt)
 
 
-@Andencento.on(andencento_cmd(pattern=f"logic$", outgoing=True))
+@Andencento.on(admin_cmd(pattern=f"logic$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=f"logic$", allow_sudo=True))
 async def _(e):
     txt = random.choice(LOGIC)
     await eor(e, txt)
 
 
-@Andencento.on(andencento_cmd(pattern=r"snow$", outgoing=True))
+@Andencento.on(admin_cmd(pattern=r"snow$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"sonw$", allow_sudo=True))
 async def _(e):
     txt = random.choice(SNOW)
     await eor(e, txt)
 
 
-@Andencento.on(andencento_cmd(pattern=r"shayri$", outgoing=True))
+@bot.on(admin_cmd(pattern=r"shayri$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"shayri$", allow_sudo=True))
 async def _(e):
     txt = random.choice(SHAYRI)
     await eor(e, txt.format(user_mention))
 
 
-@Andencento.on(andencento_cmd(pattern=r"hflirt$", outgoing=True))
+@Andencento.on(admin_cmd(pattern=r"hflirt$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"hflirt$", allow_sudo=True))
 async def _(e):
     await eor(e, txt.format(user_mention))
 
 
-@Andencento.on(andencento_cmd(pattern=r"eflirt$", outgoing=True))
+@Andencento.on(admin_cmd(pattern=r"eflirt$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"eflirt$", allow_sudo=True))
 async def _(e):
     txt = random.choice(EFLIRT)
     await eor(e, txt.format(user_mention))
 
 
-@Andencento.on(andencento_cmd(pattern=r"attitude$", outgoing=True))
+@Andencento.on(admin_cmd(pattern=r"attitude$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"attitude$", allow_sudo=True))
 async def _(e):
     txt = random.choice(ATTITUDE)
     await eor(e, txt.format(user_mention))
 
 
-@Andencento.on(andencento_cmd(pattern="gbye$", outgoing=True))
+@Andencento.on(admin_cmd(pattern="gbye$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="gbye$", allow_sudo=True))
 async def _(e):
     txt = random.choice(GBYE)

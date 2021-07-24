@@ -70,7 +70,7 @@ async def formatJSON(outData):
         return msg
 
 
-@Andencento.on(andencento_cmd(pattern="anilist (.*)"))
+@Andencento.on(admin_cmd(pattern="anilist (.*)"))
 @Andencento.on(sudo_cmd(pattern="anilist (.*)", allow_sudo=True))
 async def anilist(event):
     if event.fwd_from:
@@ -82,7 +82,7 @@ async def anilist(event):
     await event.edit(msg, link_preview=True)
 
 
-@Andencento.on(andencento_cmd(pattern="anime(?: |$)(.*)"))
+@Andencento.on(admin_cmd(pattern="anime(?: |$)(.*)"))
 @Andencento.on(sudo_cmd(pattern="anime(?: |$)(.*)", allow_sudo=True))
 async def nope(hel_):
     user = hel_.pattern_match.group(1)
@@ -106,7 +106,7 @@ async def nope(hel_):
     await hel_.delete()
 
 
-@Andencento.on(andencento_cmd(pattern="manga(?: |$)(.*)"))
+@Andencento.on(admin_cmd(pattern="manga(?: |$)(.*)"))
 @Andencento.on(sudo_cmd(pattern="manga(?: |$)(.*)", allow_sudo=True))
 async def nope(hel_):
     user = hel_.pattern_match.group(1)
@@ -130,7 +130,7 @@ async def nope(hel_):
     await hel_.delete()
 
 
-@Andencento.on(andencento_cmd(pattern="character(?: |$)(.*)"))
+@Andencento.on(admin_cmd(pattern="character(?: |$)(.*)"))
 @Andencento.on(sudo_cmd(pattern="character(?: |$)(.*)", allow_sudo=True))
 async def nope(hel_):
     user = hel_.pattern_match.group(1)

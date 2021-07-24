@@ -1,7 +1,8 @@
 import os
 
 from userbot import YOUR_NAME as ALIVE_NAME
-ver = "0.2"
+
+from .. import ver
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Unknown"
 PM_IMG = (
@@ -21,7 +22,7 @@ pm_caption += "➥ **¢σρуяιgнт** : By [𝘛𝘦𝘢𝘮 𝘈𝘯𝘥𝘦
 
 
 # only Owner Can Use it
-@Andencento.on(andencento_cmd(outgoing=True, pattern="alive$"))
+@Andencento.on(admin_cmd(outgoing=True, pattern="alive$"))
 @Andencento.on(sudo_cmd(pattern="alive$", allow_sudo=True))
 async def _(event):
     await event.get_chat()

@@ -3,7 +3,7 @@ import asyncio
 from telethon.tl.functions.channels import EditBannedRequest
 from telethon.tl.types import ChatBannedRights
 
-from sql import antiflood_sql as sq
+from userbot.sql import antiflood_sql as sq
 
 from . import *
 
@@ -14,7 +14,7 @@ ANTI_FLOOD_WARN_MODE = ChatBannedRights(
 )
 
 
-@Andencento.on(andencento_cmd(incoming=True))
+@Andencento.on(admin_cmd(incoming=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -57,7 +57,7 @@ because he reached the defined flood limit.""".format(
         )
 
 
-@Andencento.on(andencento_cmd(pattern="setflood(?: |$)(.*)"))
+@Andencento.on(admin_cmd(pattern="setflood(?: |$)(.*)"))
 @Andencento.on(sudo_cmd(pattern="setflood(?: |$)(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:

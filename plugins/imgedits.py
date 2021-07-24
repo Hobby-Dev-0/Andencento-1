@@ -10,7 +10,7 @@ if not os.path.isdir("./userbot/"):
     os.makedirs("./userbot/")
 
 
-@Andencento.on(andencento_cmd(pattern=r"feye$"))
+@Andencento.on(admin_cmd(pattern=r"feye$"))
 @Andencento.on(sudo_cmd(pattern=r"feye$", allow_sudo=True))
 async def fun(event):
     if event.fwd_from:
@@ -42,7 +42,7 @@ async def fun(event):
     await event.delete()
 
 
-@Andencento.on(andencento_cmd(pattern=r"warp$"))
+@Andencento.on(admin_cmd(pattern=r"warp$"))
 @Andencento.on(sudo_cmd(pattern=r"warp$", allow_sudo=True))
 async def fun(event):
     if event.fwd_from:
@@ -76,7 +76,7 @@ async def fun(event):
     await event.delete()
 
 
-@Andencento.on(andencento_cmd(pattern=r"distort$"))
+@Andencento.on(admin_cmd(pattern=r"distort$"))
 @Andencento.on(sudo_cmd(pattern=r"distort$", allow_sudo=True))
 async def fun(event):
     if event.fwd_from:

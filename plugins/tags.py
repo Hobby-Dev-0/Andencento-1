@@ -4,7 +4,7 @@ from telethon.utils import get_display_name
 from . import *
 
 
-@Andencento.on(andencento_cmd(pattern=r"tag(all|bots|admins)?(.*)"))
+@Andencento.on(admin_cmd(pattern=r"tag(all|bots|admins)?(.*)"))
 @Andencento.on(sudo_cmd(pattern=r"tag(all|bots|admins)?(.*)", allow_sudo=True))
 async def tag(event):
     text = event.text

@@ -51,7 +51,7 @@ def user_full_name(user):
     return full_name
 
 
-@Andencento.on(andencento_cmd(pattern=r"inviteall ?(.*)"))
+@Andencento.on(admin_cmd(pattern=r"inviteall ?(.*)"))
 @Andencento.on(sudo_cmd(pattern=r"inviteall ?(.*)", allow_sudo=True))
 async def get_users(event):
     sender = await event.get_sender()
@@ -97,7 +97,7 @@ async def get_users(event):
     )
 
 
-@Andencento.on(andencento_cmd(pattern=r"add ?(.*)"))
+@Andencento.on(admin_cmd(pattern=r"add ?(.*)"))
 @Andencento.on(sudo_cmd(pattern=r"add ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:

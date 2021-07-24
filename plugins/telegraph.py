@@ -6,14 +6,14 @@ from telegraph import Telegraph, exceptions, upload_file
 
 from config import Config
 from userbot import CMD_HELP
-from userbot.utils import andencento_cmd
+from userbot.utils import admin_cmd
 
 telegraph = Telegraph()
 r = telegraph.create_account(short_name=Config.TELEGRAPH_SHORT_NAME)
 auth_url = r["auth_url"]
 
 
-@borg.on(andencento_cmd("t(m|t) ?(.*)"))
+@borg.on(admin_cmd("t(m|t) ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return

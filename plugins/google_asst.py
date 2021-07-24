@@ -10,7 +10,7 @@ from gtts import gTTS
 from . import *
 
 
-@Andencento.on(andencento_cmd(pattern="trt ?(.*)"))
+@Andencento.on(admin_cmd(pattern="trt ?(.*)"))
 @Andencento.on(sudo_cmd(pattern="trt ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -46,7 +46,7 @@ async def _(event):
         await edit_or_reply(event, str(exc))
 
 
-@Andencento.on(andencento_cmd(pattern=r"trc", outgoing=True))
+@Andencento.on(admin_cmd(pattern=r"trc", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"trc", allow_sudo=True))
 async def _(user):
     if user.fwd_from:
@@ -58,7 +58,7 @@ async def _(user):
     )
 
 
-@Andencento.on(andencento_cmd(pattern="voice (.*)"))
+@Andencento.on(admin_cmd(pattern="voice (.*)"))
 @Andencento.on(sudo_cmd(pattern="voice (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:

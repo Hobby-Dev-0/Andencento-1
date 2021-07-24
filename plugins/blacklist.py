@@ -2,7 +2,7 @@ import re
 
 from telethon import events
 
-from sql import blacklist_sql as sq
+from userbot.sql import blacklist_sql as sq
 
 from . import *
 
@@ -25,7 +25,7 @@ async def on_new_message(event):
             break
 
 
-@Andencento.on(andencento_cmd(pattern="addblacklist ((.|\n)*)"))
+@Andencento.on(admin_cmd(pattern="addblacklist ((.|\n)*)"))
 @Andencento.on(sudo_cmd(pattern="addblacklist ((.|\n)*)", allow_sudo=True))
 async def on_add_black_list(event):
     if event.fwd_from:
@@ -45,7 +45,7 @@ async def on_add_black_list(event):
     )
 
 
-@Andencento.on(andencento_cmd(pattern="rmblacklist ((.|\n)*)"))
+@Andencento.on(admin_cmd(pattern="rmblacklist ((.|\n)*)"))
 @Andencento.on(sudo_cmd(pattern="rmblacklist ((.|\n)*)", allow_sudo=True))
 async def on_delete_blacklist(event):
     if event.fwd_from:
@@ -66,7 +66,7 @@ async def on_delete_blacklist(event):
     )
 
 
-@Andencento.on(andencento_cmd(pattern="listblacklist$"))
+@Andencento.on(admin_cmd(pattern="listblacklist$"))
 @Andencento.on(sudo_cmd(pattern="listblacklist$", allow_sudo=True))
 async def on_view_blacklist(event):
     if event.fwd_from:

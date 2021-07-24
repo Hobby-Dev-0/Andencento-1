@@ -9,8 +9,7 @@ from telethon.tl import functions, types
 
 from userbot import ALIVE_NAME
 from userbot.cmdhelp import CmdHelp
-from userbot.utils import andencento_cmd
-from . import *
+from userbot.utils import admin_cmd
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "bot"
 
@@ -112,7 +111,7 @@ async def on_afk(event):
         last_afk_message[event.chat_id] = msg  # pylint:disable=E0602
 
 
-@borg.on(andencento_cmd(pattern=r"afk (.*)", outgoing=True))  # pylint:disable=E0602
+@borg.on(admin_cmd(pattern=r"afk (.*)", outgoing=True))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
