@@ -38,7 +38,7 @@ from telethon.tl.functions.channels import JoinChannelRequest as join
 from . import *
 
 
-@bot.on(admin_cmd(None))
+@Andencento.on(admin_cmd(None))
 async def safety(event):
     text = event.text
     x = handler()

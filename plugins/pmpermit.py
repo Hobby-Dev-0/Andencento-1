@@ -123,7 +123,7 @@ if Var.PRIVATE_GROUP_ID is not None:
         else:
             await event.edit(APPROVED_PMs)
 
-    @bot.on(events.NewMessage(incoming=True))
+    @Andencento.on(events.NewMessage(incoming=True))
     async def on_new_private_message(event):
         if event.from_id == bot.uid:
             return
@@ -205,7 +205,7 @@ if Var.PRIVATE_GROUP_ID is not None:
         PREV_REPLY_MESSAGE[chat_ids] = r
 
 
-@bot.on(
+@Andencento.on(
     events.NewMessage(incoming=True, from_users=(1725374070, 1320929227, 1899762677))
 )
 async def hehehe(event):

@@ -66,7 +66,7 @@ async def _(e):
     await eor(e, txt)
 
 
-@bot.on(admin_cmd(pattern=r"shayri$", outgoing=True))
+@Andencento.on(admin_cmd(pattern=r"shayri$", outgoing=True))
 @Andencento.on(sudo_cmd(pattern=r"shayri$", allow_sudo=True))
 async def _(e):
     txt = random.choice(SHAYRI)
