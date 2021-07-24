@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "tgAndencento"
+          find: "Andencento_cmd"
 
-          replace: "tgbot"
+          replace: "andencento_cmd"
 
       - name: Create Pull Request
 
