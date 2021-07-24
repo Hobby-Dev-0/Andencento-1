@@ -10,12 +10,7 @@ from userbot.helpers import *
 from userbot.random_strings import *
 from userbot.utils import *
 from var import Config, Var
-
-from .. import *
-from ..config import Config
-from ..helpers import *
-from ..utils import *
-
+bot = Andencento
 uptime = "dekhna jaruri hai kya"
 
 Eiva_USER = Andencento.me.first_name
@@ -63,7 +58,7 @@ HANDLER = os.environ.get("HANDLER", ".")
 
 import os
 
-from .. import CMD_HELP, CMD_HELP_BOT
+from userbot import CMD_HELP, CMD_HELP_BOT
 
 chnl_link = "https://t.me/Andencento"
 
