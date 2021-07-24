@@ -6,7 +6,7 @@ from telethon import custom, events
 
 from config import Config
 from userbot import CMD_LIST
-
+cmd = "commands"
 if Config.BOT_USERNAME is not None and tgbot is not None:
 
     @tgbot.on(events.InlineQuery)  # pylint:disable=E0602
@@ -22,7 +22,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             buttons = paginate_help(0, CMD_LIST, "helpme")
             result = builder.article(
                 "© Andencento-UserBot Help",
-                text="{}\n🔢 Currently Loaded Plugins: {}".format(query, len(CMD_LIST))\n"🗂️ __Commands__ ": `{len(apn)}`\n,
+                text="{}\n🔢 Currently Loaded Plugins: {}".format(query, len(CMD_LIST))\n🗂️ cmd : `{len(apn)}`\n,
                 buttons=buttons,
                 link_preview=False,
             )
