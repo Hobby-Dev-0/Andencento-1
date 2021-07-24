@@ -2,7 +2,7 @@ import os
 
 from userbot import YOUR_NAME as ALIVE_NAME
 
-from .. import ver
+ver = "0.2"
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Unknown"
 PM_IMG = (
