@@ -10,6 +10,7 @@ from telethon.tl import functions, types
 from userbot import ALIVE_NAME
 from userbot.cmdhelp import CmdHelp
 from userbot.utils import andencento_cmd
+from . import *
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "bot"
 
