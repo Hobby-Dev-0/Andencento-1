@@ -10,6 +10,7 @@ from userbot.helpers import *
 from userbot.random_strings import *
 from userbot.utils import *
 from var import Config, Var
+from userbot.config import Config
 bot = Andencento
 uptime = "dekhna jaruri hai kya"
 
