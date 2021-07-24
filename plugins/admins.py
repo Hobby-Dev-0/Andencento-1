@@ -12,7 +12,7 @@ from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import (ChatAdminRights, ChatBannedRights,
                                MessageEntityMentionName, MessageMediaPhoto)
 
-from userbot.sql.mute_sql import is_muted, mute, unmute
+from sql.mute_sql import is_muted, mute, unmute
 
 from . import *
 

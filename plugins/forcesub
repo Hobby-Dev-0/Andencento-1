@@ -3,7 +3,7 @@ from telethon.tl.custom import Button
 from telethon.errors.rpcerrorlist import UserNotParticipantError
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.functions.messages import ExportChatInviteRequest
-from userbot.sql.fsub_sql import *
+from sql.fsub_sql import *
 from . import *
 """
 @tgAndencento.on(InlineQuery)
