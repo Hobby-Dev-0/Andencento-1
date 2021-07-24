@@ -3,7 +3,7 @@ from telethon.errors.rpcerrorlist import (MediaEmptyError,
                                           WebpageCurlFailedError,
                                           WebpageMediaEmptyError)
 from telethon.events import CallbackQuery
-
+from userbot import ver
 from userbot import *
 from userbot.config import Config
 from userbot.helpers import *
