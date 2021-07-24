@@ -14,12 +14,15 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         builder = event.builder
         result = None
         query = event.text
+        apn = []
+        for x in CMD_LIST.values():
+            for y in x:
         if event.query.user_id == bot.uid and query.startswith("Userbot"):
             rev_text = query[::-1]
             buttons = paginate_help(0, CMD_LIST, "helpme")
             result = builder.article(
                 "© Andencento-UserBot Help",
-                text="{}\n🔢 Currently Loaded Plugins: {}".format(query, len(CMD_LIST)),
+                text="{}\n🔢 Currently Loaded Plugins: {}".format(query, len(CMD_LIST))\n"🗂️ __Commands__ ": `{len(apn)}`\n,
                 buttons=buttons,
                 link_preview=False,
             )
