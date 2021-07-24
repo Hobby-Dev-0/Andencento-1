@@ -17,6 +17,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         apn = []
         for x in CMD_LIST.values():
             for y in x:
+                apn.append(y)
         if event.query.user_id == bot.uid and query.startswith("Userbot"):
             rev_text = query[::-1]
             buttons = paginate_help(0, CMD_LIST, "helpme")
