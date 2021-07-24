@@ -9,14 +9,14 @@ from . import *
 FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
 
 
-@Andencento.on(admin_cmd(pattern="time ?(.*)", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="time ?(.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="time ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
     current_time = datetime.datetime.now().strftime(
         "⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡\
-        \n   HELLBOT TIMEZONE   \
+        \n   ANDENCENTO TIMEZONE   \
         \n   LOCATION: India🇮🇳  \
         \n   Time: %H:%M:%S  \
         \n   Date: %d.%m.%y     \
