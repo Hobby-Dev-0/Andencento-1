@@ -192,3 +192,13 @@ KANGING_STR = [
     "Hey! That's my sticker. Lemme get it back...",
     "Turn around, Go straight and f*ck off...",
 ]
+async def bash(cmd):
+    process = await asyncio.create_subprocess_shell(
+        cmd,
+        stdout=asyncio.subprocess.PIPE,
+        stderr=asyncio.subprocess.PIPE,
+    )
+    stdout, stderr = await process.communicate()
+    err = stderr.decode().strip()
+    out = stdout.decode().strip()
+    return out, err
