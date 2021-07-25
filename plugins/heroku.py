@@ -23,7 +23,7 @@ async def restart(event):
         event,
         f"✅ **Restarted ᴀɴᴅᴇɴᴄᴇɴᴛᴏ** \n**Type** `{hl}ping` **after 1 minute to check if I am working !**",
     )
-    await sys.exit(1)
+    await sys.restart
 
 @Andencento.on(andencento_cmd(pattern="restart$"))
 @Andencento.on(sudo_cmd(pattern="restart$", allow_sudo=True))
