@@ -37,7 +37,7 @@ async def set_not_afk(event):
     global last_afk_message  # pylint:disable=E0602
     global afk_start
     global afk_end
-    came_back = datetime.now()
+    came_back = datetime
     afk_end = came_back.replace(microsecond=0)
     if afk_start != {}:
         total_afk_time = str((afk_end - afk_start))
