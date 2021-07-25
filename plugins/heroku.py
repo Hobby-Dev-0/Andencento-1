@@ -21,7 +21,7 @@ lg_id = Config.LOGGER_ID
 async def restart(event):
     await eor(
         event,
-        f"✅ **Restarted ᴀɴᴅᴇɴᴄᴇɴᴛᴏ** \n**Type** `{hl}ping` **after 1 minute to check if I am working !**",
+        f"✅ **Restarted Andencento** \n**Type** `{hl}ping` **after 1 minute to check if I am working !**",
     )
     await Andencento.disconnect()
     # https://archive.is/im3rt
