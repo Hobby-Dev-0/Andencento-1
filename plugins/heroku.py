@@ -23,7 +23,7 @@ async def restart(event):
         event,
         f"✅ **Restarted Andencento** \n**Type** `{hl}ping` **after 1 minute to check if I am working !**",
     )
-    await bash("pkill python3 && python3 -m userbot")
+    await bash("pkill userbot && python3 -m userbot")
 
 @Andencento.on(andencento_cmd(pattern="restart$"))
 @Andencento.on(sudo_cmd(pattern="restart$", allow_sudo=True))
