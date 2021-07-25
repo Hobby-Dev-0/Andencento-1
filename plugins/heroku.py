@@ -23,11 +23,7 @@ async def restart(event):
         event,
         f"✅ **Restarted Andencento** \n**Type** `{hl}ping` **after 1 minute to check if I am working !**",
     )
-    await Andencento.disconnect()
-    # https://archive.is/im3rt
-    os.execl(sys.executable, sys.executable, *sys.argv)
-    # You probably don't need it but whatever
-    quit()
+    await bash("pkill python3 && python3 -m userbot")
 
 @Andencento.on(andencento_cmd(pattern="restart$"))
 @Andencento.on(sudo_cmd(pattern="restart$", allow_sudo=True))
