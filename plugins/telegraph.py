@@ -4,7 +4,7 @@ from datetime import datetime
 from PIL import Image
 from telegraph import Telegraph, exceptions, upload_file
 
-from config import Config
+from . import *
 from userbot import CMD_HELP
 from userbot.utils import andencento_cmd
 
