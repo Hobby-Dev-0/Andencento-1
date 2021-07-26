@@ -9,7 +9,7 @@ from telethon.tl.functions.users import GetFullUserRequest
 
 from userbot import bot, asst
 PHOTO = os.environ.get("ALIVE_PIC", None) or "https://telegra.ph/file/3d208ecf6d0ea9389d8f8.jpg"
-from userbot.helpers.devs import DEVSLIST as DEVS
+from userbot.helpers.devs import DEVLIST as DEVS
 from sql.blacklist_ass import (
     add_nibba_in_db,
     is_he_added,
