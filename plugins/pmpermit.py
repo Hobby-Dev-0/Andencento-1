@@ -8,6 +8,8 @@ from telethon.tl.functions.users import GetFullUserRequest
 import sql.pmpermit_sql as pmpermit_sql
 from userbot import ALIVE_NAME
 
+DEFUALTUSER = ALIVE_NAME
+
 from . import *
 
 CUSTOM_PMPERMIT = os.environ.get("PMPERMIT_TXT", None) or "PM SECURITY OF ANDENCENTO"
