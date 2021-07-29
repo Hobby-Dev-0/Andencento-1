@@ -10,7 +10,7 @@ from userbot import ALIVE_NAME
 
 from . import *
 
-CUSTOM_PMPERMIT = "PM SECURITY OF ANDENCENTO"
+CUSTOM_PMPERMIT = os.environ.get("PMPERMIT_TXT", None) or "PM SECURITY OF ANDENCENTO"
 
 PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
 if PMPERMIT_PIC is None:
