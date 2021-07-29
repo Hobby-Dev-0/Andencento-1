@@ -14,7 +14,7 @@
 [![Size](https://img.shields.io/github/repo-size/Andencento/Andencento?style=flat-square&color=green)](https://github.com/Andencento/Andencento)   
 [![Python](https://img.shields.io/badge/Python-v3.9-blue)](https://www.python.org/)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/Noob-Stranger/andencento/graphs/commit-activity)
-[![Close Source Love](https://badges.frapsoft.com/os/v1/close-source.png?v=103)](https://github.com/Andencento/Andencento/)
+[![Close Source Love](https://badges.frapsoft.com/os/v1/closed-source.png?v=103)](https://github.com/Andencento/Andencento/)
 [![Contributors](https://img.shields.io/github/contributors/Andencento/Andencento?style=flat-square&color=pink)](https://github.com/Andencento/Andencento/graphs/contributors)
 
 ## Inspirations
