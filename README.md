@@ -25,7 +25,8 @@
 
 
 ## Deploy To Heroku
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FAndencento%2FDeploy-Andencento&template=https%3A%2F%2Fgithub.com%2FAndencento%2FDeploy-Andencento)
+[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Andencento/Deploy-Andencento)
+
 
 ## Andencento Session
 [![Andencento Session](https://repl.it/badge/github/Andencento/Andencento)](https://replit.com/@madboy482/Session-Andencento/)
