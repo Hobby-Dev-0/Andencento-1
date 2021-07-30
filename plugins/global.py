@@ -12,38 +12,31 @@ from . import *
 
 @Andencento.on(sudo_cmd(pattern=r"gban ?(.*)", allow_sudo=True))
 async def _(event):
-    await eor(event, "`Sudo Restricted Command Sur`")
-    return
+    await Andencento.send_message(event, "`Sudo Restricted Command Sur`")
 
 
 @Andencento.on(sudo_cmd(allow_sudo=True, pattern=r"ungmute ?(\d+)?"))
 async def _(event):
-    await eor(event, "`Sudo Restricted Command Sur`")
-    return
-
+    await Andencento.send_message(event, "`Sudo Restricted Command Sur`")
 
 @Andencento.on(sudo_cmd(pattern="listgban$", allow_sudo=True))
 async def _(event):
-    await eor(event, "`Sudo Restricted Command Sur`")
-    return
+    await Andencento.send_message(event, "`Sudo Restricted Command Sur`")
 
 
 @Andencento.on(sudo_cmd(pattern=r"ungban ?(.*)", allow_sudo=True))
 async def _(event):
-    await eor(event, "`Sudo Restricted Command Sur`")
-    return
+    await Andencento.send_message(event, "`Sudo Restricted Command Sur`")
 
 
 @Andencento.on(sudo_cmd(pattern=r"gkick ?(.*)", allow_sudo=True))
 async def _(event):
-    await eor(event, "`Sudo Restricted Command Sur`")
-    return
+    await Andencento.send_message(event, "`Sudo Restricted Command Sur`")
 
 
 @Andencento.on(sudo_cmd(allow_sudo=True, pattern=r"gmute ?(\d+)?"))
 async def _(event):
-    await eor(event, "`Sudo Restricted Command Sur`")
-    return
+    await Andencento.send_message(event, "`Sudo Restricted Command Sur`")
 
 
 @Andencento.on(andencento_cmd(pattern=r"gban ?(.*)"))
@@ -76,11 +69,11 @@ async def _(event):
     name = (await event.client.get_entity(userid)).first_name
     chats = 0
     if userid == ForGo10God:
-        return await eod(user, "🥴 **Nashe me hai kya lawde ‽**")
+        return await eod(user, "🥴 **Nashe me hai kya  ‽**")
     if str(userid) in DEVLIST:
         return await eod(
             user,
-            "😑 **Nashe me hai kya lawde. Apne bap ko gban dene chala h bhadwe baap se backchodi nahi ?¿ smjha‽**",
+            "😑 **Nashe me hai kya Apne bap ko gban dene chala h ?¿ K‽**",
         )
     if is_gbanned(userid):
         return await eod(
