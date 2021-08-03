@@ -27,6 +27,13 @@
 ## Deploy To Heroku
 [![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Andencento/Deploy-Andencento)
 
+## VC Deploy (Music)
+- [![Deploy](https://www.herokucdn.com/deploy/button.svg)](http://heroku.com/deploy?template=https://github.com/Andencento/Andencento/tree/vc)
+
 
 ## Andencento Session
 [![Andencento Session](https://repl.it/badge/github/Andencento/Andencento)](https://replit.com/@madboy482/Session-Andencento/)
+
+
+## VC Session
+- [![Run on Repl.it](https://repl.it/badge/github/Andencento/Andencentovcbot)](https://replit.com/@dashezup/generate-pyrogram-session-string)
