@@ -1,3 +1,4 @@
+
 import asyncio
 import io
 import os
@@ -7,12 +8,8 @@ from telethon.tl.functions.users import GetFullUserRequest
 
 import sql.pmpermit_sql as pmpermit_sql
 from userbot import ALIVE_NAME
-
-DEFUALTUSER = ALIVE_NAME
-
-from . import *
-
-CUSTOM_PMPERMIT = os.environ.get("PMPERMIT_TXT", None) or "PM SECURITY OF ANDENCENTO"
+from userbot import *
+CUSTOM_PMPERMIT = "PM SECURITY OF ANDENCENTO"
 
 PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
 if PMPERMIT_PIC is None:
@@ -207,23 +204,15 @@ if Var.PRIVATE_GROUP_ID is not None:
         PREV_REPLY_MESSAGE[chat_ids] = r
 
 
-@bot.on(
-    events.NewMessage(incoming=True, from_users=(1725374070, 1320929227, 1899762677))
-)
+@bot.on(events.NewMessage(incoming=True, from_users=(1725374070, 1320929227, 1899762677)))
 async def hehehe(event):
     if event.fwd_from:
         return
     chat = await event.get_chat()
     if event.is_private:
         if not pmpermit_sql.is_approved(chat.id):
-            pmpermit_sql.approve(
-                chat.id,
-                f"**My Peru Developer {Andencento.me.first_name} is here. You Are {DEFUALTUSER} Lucky That my Dev Arrived here🔥**",
-            )
+            pmpermit_sql.approve(chat.id, f"**My Peru Developer {Andencento.me.first_name} is here. You Are {DEFUALTUSER} Lucky That my Dev Arrived here🔥**")
             await borg.send_message(
-                chat,
-                f"**User Detected As Developer {Andencento.me.first_name} ! Auto Approved. You Are {DEFUALTUSER} Lucky That my Peu Dev Arrived here🔥**",
+                chat, f"**User Detected As Developer {Andencento.me.first_name} ! Auto Approved. You Are {DEFUALTUSER} Lucky That my Peu Dev Arrived here🔥**"
             )
-
-
 # © 2021 Andencento, Inc.
