@@ -6,7 +6,7 @@
 ### • MADBOY »» <a href="https://github.com/madboy482" alt="MadBoy"> <img src="https://img.shields.io/badge/MADBOY-30302f?logo=github" /></a>
 ### • InternetAmethyst »» <a href="https://github.com/InternetAmethyst" alt="InternetAmethyst&color=yellow"> <img src="https://img.shields.io/badge/InternetAmethyst-30302f?logo=github" /></a>
 ### • GODBOYX »» <a href="https://github.com/GODBOYX" alt="GODBOYX"> <img src="https://img.shields.io/badge/GODBOYX-30302f?logo=github" /></a>
-### • InukaAsith »» <a href="https://github.com/InukaAsith" alt="InukaAsith"> <img src="https://img.shields.io/badge/InukaAsith-30302f?logo=github" /></a>
+### • InukaAsith »» <a href="https://github.com/InukaAsith" alt="InukaAsith"> <img src="https://img.shields.io/badge/InukaAsith-30302f?logo=github&color=yellow" /></a>
 ## SOME INFO
 [![Stars](https://img.shields.io/github/stars/Andencento/Andencento?style=flat-square&color=yellow)](https://github.com/Andencento/Andencento/stargazers)
 [![Forks](https://img.shields.io/github/forks/Andencento/Andencento?style=flat-square&color=orange)](https://github.com/Andencento/Andencento/fork)
