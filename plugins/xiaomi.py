@@ -148,7 +148,7 @@ async def _(event):
     if event.fwd_from:
         return
     link = event. pattern_match. group(1)
-      vendor= f"vendor"
+      vendor= "vendor"
     await event. edit("''Processing'''")
     async with bot. conversation("@XiaomiGeeksBot") as conv:
         try:
