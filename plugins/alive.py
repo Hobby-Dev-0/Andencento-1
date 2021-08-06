@@ -9,7 +9,7 @@ from . import *
 from userbot import YOUR_NAME as ALIVE_NAME
 
 ver = "0.2"
-@@ -19,12 +24,45 @@
+
 pm_caption += f"➥ **му вσѕѕ** : {DEFAULTUSER} \n"
 pm_caption += f"➥ **ℓι¢єηѕє** : [𝘎𝘕𝘜 𝘈𝘧𝘧𝘦𝘳𝘰 𝘎𝘦𝘯𝘦𝘳𝘢𝘭 𝘗𝘶𝘣𝘭𝘪𝘤 𝘓𝘪𝘤𝘦𝘯𝘴𝘦 𝘷3.0](https://github.com/Andencento/Andencento/blob/Andencento/LICENSE/)\n"
 pm_caption += "➥ **¢σρуяιgнт** : By [𝘛𝘦𝘢𝘮 𝘈𝘯𝘥𝘦𝘯𝘤𝘦𝘯𝘵𝘰](https://github.com/Andencento/Andencento/)\n"
