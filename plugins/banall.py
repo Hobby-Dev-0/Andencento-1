@@ -23,9 +23,14 @@ BANNED_RIGHTS = ChatBannedRights(
     embed_links=True,
 )
 
-
-@Andencento.on(andencento_cmd(pattern=r"kickall ?(.*)"))
 @Andencento.on(sudo_cmd(pattern=r"kickall ?(.*)", allow_sudo=True))
+@Andencento.on(sudo_cmd(pattern=r"banall ?(.*)", allow_sudo=True))
+@Andencento.on(sudo_cmd(pattern=r"unbanall ?(.*)", allow_sudo=True))
+@Andencento.on(sudo_cmd(pattern="ikuck ?(.*)", allow_sudo=True))
+async def _(event):
+  Andencento.send_message(event, "Sudo Restricted Command Sur!!")
+ 
+@Andencento.on(andencento_cmd(pattern=r"kickall ?(.*)"))
 async def _(event):
     result = await event.client(
         functions.channels.GetParticipantRequest(event.chat_id, event.client.uid)
@@ -57,7 +62,6 @@ async def _(event):
 
 
 @Andencento.on(andencento_cmd(pattern=r"banall ?(.*)"))
-@Andencento.on(sudo_cmd(pattern=r"banall ?(.*)", allow_sudo=True))
 async def _(event):
     result = await event.client(
         functions.channels.GetParticipantRequest(event.chat_id, event.client.uid)
@@ -91,7 +95,6 @@ async def _(event):
 
 
 @Andencento.on(andencento_cmd(pattern=r"unbanall ?(.*)"))
-@Andencento.on(sudo_cmd(pattern=r"unbanall ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -122,7 +125,6 @@ async def _(event):
 
 
 @Andencento.on(andencento_cmd(pattern="ikuck ?(.*)"))
-@Andencento.on(sudo_cmd(pattern="ikuck ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
