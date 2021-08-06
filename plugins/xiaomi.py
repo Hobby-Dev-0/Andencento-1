@@ -6,8 +6,8 @@ from userbot. events import register
 
 
 @register(outgoing=True, pattern="^.firmware(?: |$)(.*)")
-async def (event):
-    if event. fwd_from:
+async def _(event):
+    if event.fwd_from:
         return
     link = event. pattern_match. group(1)
     firmware = "firmware"
@@ -29,8 +29,8 @@ async def (event):
 
 
 @register(outgoing=True, pattern="^.fastboot(?: |$)(.*)")
-async def (event):
-    if event. fwd_from:
+async def _(event):
+    if event.fwd_from:
         return
     link = event. pattern_match. group(1)
     fboot = "fastboot"
@@ -52,8 +52,8 @@ async def (event):
 
 
 @register(outgoing=True, pattern="^.recovery(?: |$)(.*)")
-async def (event):
-    if event. fwd_from:
+async def _(event):
+    if event.fwd_from:
         return
     link = event. pattern_match. group(1)
     recovery = "recovery"
@@ -75,8 +75,8 @@ async def (event):
 
 
 @register(outgoing=True, pattern="^.pb(?: |$)(.*)")
-async def (event):
-    if event. fwd_from:
+async def _(event):
+    if event.fwd_from:
         return
     link = event. pattern_match. group(1)
     pitch = "pb"
@@ -98,8 +98,8 @@ async def (event):
 
 
 @register(outgoing=True, pattern="^.of(?: |$)(.*)")
-async def (event):
-    if event. fwd_from:
+async def _(event):
+    if event.fwd_from:
         return
     link = event. pattern_match. group(1)
     ofox = "of"
@@ -121,8 +121,8 @@ async def (event):
 
 
 @register(outgoing=True, pattern="^.eu(?: |$)(.*)")
-async def (event):
-    if event. fwd_from:
+async def _(event):
+    if event.fwd_from:
         return
     link = event. pattern_match. group(1)
     eu = "eu"
@@ -144,8 +144,8 @@ async def (event):
 
 
 @register(outgoing=True, pattern="^.vendor(?: |$)(.*)")
-async def (event):
-    if event. fwd_from:
+async def _(event):
+    if event.fwd_from:
         return
     link = event. pattern_match. group(1)
       vendor="vendor"
@@ -167,8 +167,8 @@ async def (event):
 
 
 @register(outgoing=True, pattern="^.specs(?: |$)(.*)")
-async def (event):
-    if event. fwd_from:
+async def _(event):
+    if event.fwd_from:
         return
     link = event. pattern_match. group(1)
     specs=  "specs"
