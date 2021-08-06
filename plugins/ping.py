@@ -9,11 +9,11 @@ async def pong(user):
     if user.fwd_from:
         return
     start = datetime.datetime.now()
-    event = await eor(user, "`·.·★ ℘ıŋɠ ★·.·´")
+    event = await eor(user, "`·.·★ 🅟🅘🅝🅖 ★·.·´")
     end = datetime.datetime.now()
     ms = (end - start).microseconds / 1000
     await event.edit(
-        f"╰•★★  ℘ơŋɠ ★★•╯\n\n    ⚘  `{ms}`\n    ⚘  __**Oɯɳҽɾ**__ **:**  {user_mention}"
+        f"︻┳═一 🅟🅘🅝🅖 ︻┳═一\n\n    ⚘  `{ms}`\n    ⚘  __**🅞🅦🅝🅔🅡**__ **:**  {user_mention}"
     )
 
 
