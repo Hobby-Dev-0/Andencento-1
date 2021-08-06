@@ -73,7 +73,7 @@ async def _(event):
     if str(userid) in DEVLIST:
         return await eod(
             user,
-            "😑 **Nashe me hai kya Apne bap ko gban dene chala h ?¿ K‽**",
+            "😑 **Hey Son Dont gban your father ?¿ K‽**",
         )
     if is_gbanned(userid):
         return await eod(
@@ -90,10 +90,10 @@ async def _(event):
             except BaseException:
                 pass
     gbaner(userid)
-    gmsg = f"🥴 [{name}](tg://user?id={userid}) **Is now GBanned by** {user_mention} **in**  `{chats}`  **Agli bar se backchodi nahi betichod**\n\n📍 Also Added to Gban Watch!!**!\n**🔰 Total Chats :**  `{chats}`"
+    gmsg = f"🥴 [{name}](tg://user?id={userid}) **Is now GBanned by** {user_mention} **in**  `{chats}`  **Gbanned this retard**\n\n📍 Also Added to Gban Watch!!**!\n**🔰 Total Chats :**  `{chats}`"
     if reason != "":
         gmsg += f"\n**🔰 Reason :**  `{reason}`"
-    ogmsg = f"[{name}](tg://user?id={userid}) **Is now GBanned by** {user_mention} **in**  `{chats}`  **Agli bar se backchodi nahi betichod**\n\n**📍 Also Added to Gban Watch!!**!\n**🔰 Total Chats :**  `{chats}`"
+    ogmsg = f"[{name}](tg://user?id={userid}) **Is now GBanned by** {user_mention} **in**  `{chats}`  **Gbanned this user**\n\n**📍 Also Added to Gban Watch!!**!\n**🔰 Total Chats :**  `{chats}`"
     if reason != "":
         ogmsg += f"\n**🔰 Reason :**  `{reason}`"
     if Config.ABUSE == "ON":
@@ -181,7 +181,7 @@ async def gkick(event):
     name = (await event.client.get_entity(userid)).first_name
     chats = 0
     if userid == ForGo10God:
-        return await eod(user, "**🥴 Nashe me hai kya lawde!!**")
+        return await eod(user, "**🥴 Nashe me hai kya !!**")
     if str(userid) in DEVLIST:
         return await eod(user, "**😪 I'm not going to gkick my developer!!**")
     async for gkick in event.client.iter_dialogs():
@@ -226,7 +226,7 @@ async def gm(event):
         if str(userid) in DEVLIST:
             return await eod(event, "**Sorry I'm not going to gmute them..**")
     except:
-        pass
+        return
     try:
         gsql.gmute(userid, "gmute")
     except Exception as e:
