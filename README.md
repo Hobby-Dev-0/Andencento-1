@@ -5,7 +5,7 @@
 ### • NOOB-STRANGER »» <a href="https://github.com/Noob-Stranger" alt="Noob-Stranger"> <img src="https://img.shields.io/badge/Noob-Stranger-30302f?logo=github&color=lightgreen" /></a>
 ### • MADBOY »» <a href="https://github.com/madboy482" alt="MadBoy"> <img src="https://img.shields.io/badge/MADBOY-30302f?logo=github&color=silver" /></a>
 ### • InternetAmethyst »» <a href="https://github.com/InternetAmethyst" alt="Internet-Amethyst&color=yellow"> <img src="https://img.shields.io/badge/Internet-Amethyst-30302f?logo=github&color=red" /></a>
-### • GODBOYX »» <a href="https://github.com/GODBOYX" alt="GODBOYX"> <img src="https://img.shields.io/badge/GODBOYX-30302f?logo=github&color=blue" /></a>
+### • GODBOYX »» <a href="https://github.com/GODBOYX" alt="GODBOYX"> <img src="https://img.shields.io/badge/GODBOYX-30302f?logo=github&color=black" /></a>
 ### • InukaAsith »» <a href="https://github.com/InukaAsith" alt="Inuka-Asith"> <img src="https://img.shields.io/badge/InukaAsith-30302f?logo=github&color=yellow" /></a>
 ## SOME INFO
 [![Stars](https://img.shields.io/github/stars/Andencento/Andencento?style=flat-square&color=yellow)](https://github.com/Andencento/Andencento/stargazers)
