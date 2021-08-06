@@ -45,11 +45,11 @@ async def demploy(event):
 	bottm += [Button.url("<VC Deploy>", "http://heroku.com/deploy?template=https://github.com/Andencento/Andencento/tree/vc")]
 	bottm += [custom.Button.inline("<<Back", data="bamck")]
 	
-	await event.edit(PM_IMG, caption="Welcome to Deployment Section", buttons=bottm)
+	await event.edit("Welcome to Deployment Section", buttons=bottm)
 	
 @asst.on(events.callbackquery.CallbackQuery(data=re.compile(b"bamck")))
 async def bamck(event):
-    await event.edit(PM_IMG, caption=pm_caption, buttons=btn)
+    await event.edit(pm_caption, buttons=btn)
     
     
     
@@ -59,10 +59,10 @@ async def stling(event):
 	batan += [Button.url("<VC String Session>", "https://replit.com/@dashezup/generate-pyrogram-session-string")]
 	batan += [custom.Button.inline("<<Back", data="bomk")]
 	
-	await event.edit(PM_IMG, caption="Welcome to String Session Section ", buttons=batan)
+	await event.edit("Welcome to String Session Section ", buttons=batan)
 	
 	
 @asst.on(events.callbackquery.CallbackQuery(data=re.compile(b"bomk")))
 async def bamck(event):
-    await event.edit(PM_IMG, caption=pm_caption, buttons=btn)
+    await event.edit(pm_caption, buttons=btn)
     
