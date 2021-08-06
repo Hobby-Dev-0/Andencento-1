@@ -1,6 +1,7 @@
 import io
 import re
 from math import ceil
+from . import *
 from config import Config
 from userbot import CMD_LIST, CMD_HELP
 from telethon import custom, events
@@ -17,7 +18,7 @@ USER_BOT_WARN_ZERO = "Enough Of Your Flooding In My Master's PM!! \n\n**🚫 Blo
 ANDENCENTO_FIRST = (
     "**🔥 Andencento ULTRA Private Security 🔥**\n\nThis is to inform you that "
     "{} is currently unavailable.\nThis is an automated message.\n\n"
-    "{}\n\n**Please Choose Why You Are Here!!**".format(Eiva_mention, mssge))
+    "{}\n\n**Please Choose Why You Are Here!!**".format(Andencento_mention, mssge))
 cmd = "commands"
 andencento = Config.YOUR_NAME
 if Config.BOT_USERNAME is not None and tgbot is not None:
