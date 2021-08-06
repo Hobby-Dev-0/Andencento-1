@@ -39,7 +39,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             
             result = builder.article(
                 "© Andencento-UserBot Help",
-                text=f"🔰 **{andencento}**\n\n📜 __No.of Plugins__ : `{len(CMD_LIST)}` \n🗂️ __Commands__ : `{len(apn)}`",
+                text=f"Andencento[🤖](https://telegra.ph/file/ac32724650ef92663fbd1.png)\n🔰 **{andencento}**\n\n📜 __No.of Plugins__ : `{len(CMD_LIST)}` \n🗂️ __Commands__ : `{len(apn)}`",
                 buttons=buttons,
                 link_preview=False,
             )
@@ -100,6 +100,74 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 link_preview=False,
             )
         await event.answer([result] if result else None)
+        
+    @tgbot.on(callbackquery.CallbackQuery(data=compile(b"pmclick")))
+    async def on_pm_click(event):
+        if event.query.user_id == bot.uid:
+            reply_pop_up_alert = "This is for Other Users..."
+            await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+        else:
+            await event.edit(
+                f"🔰 This is ΣIVΛBθƬ PM Security for {Eiva_mention} to keep away unwanted retards from spamming PM..."
+            )
+
+    @tgbot.on(callbackquery.CallbackQuery(data=compile(b"req")))
+    async def on_pm_click(event):
+        if event.query.user_id == bot.uid:
+            reply_pop_up_alert = "This is for other users!"
+            await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+        else:
+            await event.edit(
+                f"✅ **Request Registered** \n\n{Eiva_mention} will now decide to look for your request or not.\n😐 Till then wait patiently and don't spam else block!!"
+            )
+            target = await event.client(GetFullUserRequest(event.query.user_id))
+            first_name = html.escape(target.user.first_name)
+            ok = event.query.user_id
+            if first_name is not None:
+                first_name = first_name.replace("\u2060", "")
+            tosend = f"**👀 Hey {Eiva_mention} !!** \n\n⚜️ You Got A Request From [{first_name}](tg://user?id={ok}) In PM!!"
+            await bot.send_message(LOG_GP, tosend)
+
+
+    @tgbot.on(callbackquery.CallbackQuery(data=compile(b"chat")))
+    async def on_pm_click(event):
+        event.query.user_id
+        if event.query.user_id == bot.uid:
+            reply_pop_up_alert = "This is for other users!"
+            await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+        else:
+            await event.edit(
+                f"Ahh!! You here to do chit-chat!!\n\nPlease wait for {Eiva_mention} to come. Till then keep patience and don't spam."
+            )
+            target = await event.client(GetFullUserRequest(event.query.user_id))
+            ok = event.query.user_id
+            first_name = html.escape(target.user.first_name)
+            if first_name is not None:
+                first_name = first_name.replace("\u2060", "")
+            tosend = f"**👀 Hey {Eiva_mention} !!** \n\n⚜️ You Got A PM from  [{first_name}](tg://user?id={ok})  for random chats!!"
+            await bot.send_message(LOG_GP, tosend)
+
+
+    @tgbot.on(callbackquery.CallbackQuery(data=compile(b"heheboi")))
+    async def on_pm_click(event):
+        if event.query.user_id == bot.uid:
+            reply_pop_up_alert = "This is for other users!"
+            await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+        else:
+            await event.edit(
+                f"🥴 **Go away from here\nYou Are Blocked Now**"
+            )
+            await bot(functions.contacts.BlockRequest(event.query.user_id))
+            target = await event.client(GetFullUserRequest(event.query.user_id))
+            ok = event.query.user_id
+            first_name = html.escape(target.user.first_name)
+            if first_name is not None:
+                first_name = first_name.replace("\u2060", "")
+            first_name = html.escape(target.user.first_name)
+            await bot.send_message(
+                LOG_GP,
+                f"**Blocked**  [{first_name}](tg://user?id={ok}) \n\nReason:- Spam",
+            )
 
     @tgbot.on(
         events.callbackquery.CallbackQuery(  # pylint:disable=E0602
