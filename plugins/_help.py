@@ -5,7 +5,7 @@ from telethon import functions
 from telethon.errors import ChatSendInlineForbiddenError as noin
 from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot
 from . import *
-@Andencento.on(admin_cmd(pattern="help ?(.*)", outgoing=True))
+@Andencento.on(andencento_cmd(pattern="help ?(.*)", outgoing=True))
 @Andencento.on(sudo_cmd(pattern="help ?(.*)", allow_sudo=True))
 async def yardim(event):
     if event.fwd_from:
