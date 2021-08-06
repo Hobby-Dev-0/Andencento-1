@@ -8,7 +8,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from . import *
 
 
-@Andencento.on(admin_cmd(pattern="firmware(?: |$)(.*)"))
+@Andencento.on(andencento_cmd(pattern="firmware(?: |$)(.*)"))
 @Andencento.on(sudo_cmd(pattern="firmware(?: |$)(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -32,7 +32,7 @@ async def _(event):
             await event.client.forward_messages(event.chat_id, respond.message)
 
 
-@Andencento.on(admin_cmd(pattern="specs(?: |$)(.*)"))
+@Andencento.on(andencento_cmd(pattern="specs(?: |$)(.*)"))
 @Andencento.on(sudo_cmd(pattern="specs(?: |$)(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -56,7 +56,7 @@ async def _(event):
             await event.client.forward_messages(event.chat_id, respond.message)
 
 
-@Andencento.on(admin_cmd(pattern="fastboot(?: |$)(.*)"))
+@Andencento.on(andencento_cmd(pattern="fastboot(?: |$)(.*)"))
 @Andencento.on(sudo_cmd(pattern="fastboot(?: |$)(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -80,7 +80,7 @@ async def _(event):
             await event.client.forward_messages(event.chat_id, respond.message)
 
 
-@Andencento.on(admin_cmd(pattern="recovery(?: |$)(.*)"))
+@Andencento.on(andencento_cmd(pattern="recovery(?: |$)(.*)"))
 @Andencento.on(sudo_cmd(pattern="recovery(?: |$)(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -104,7 +104,7 @@ async def _(event):
             await event.client.forward_messages(event.chat_id, respond.message)
 
 
-@Andencento.on(admin_cmd(pattern="pb(?: |$)(.*)"))
+@Andencento.on(andencento_cmd(pattern="pb(?: |$)(.*)"))
 @Andencento.on(sudo_cmd(pattern="pb(?: |$)(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
@@ -128,7 +128,7 @@ async def _(event):
             await event.client.forward_messages(event.chat_id, respond.message)
 
 
-@Andencento.on(admin_cmd(pattern="of(?: |$)(.*)"))
+@Andencento.on(andencento_cmd(pattern="of(?: |$)(.*)"))
 @Andencento.on(sudo_cmd(pattern="of(?: |$)(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
