@@ -1,6 +1,3 @@
-"""
-Made by GODBOYX
-"""
 import re
 import os
 from telethon import custom, Button, events
@@ -13,7 +10,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Unknown"
 PM_IMG = (
     os.environ.get("ALIVE_PIC", None)
     or "https://telegra.ph/file/3d208ecf6d0ea9389d8f8.jpg"
-)
+
 pm_caption = "➥ **αη∂єη¢єηтσ:** `ONLINE`\n\n"
 pm_caption += "➥ **ѕуѕтємѕ ѕтαтѕ**\n"
 pm_caption += "➥ **тєℓєтнση νєяѕιση:** `1.23.0` \n"
