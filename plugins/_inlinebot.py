@@ -101,17 +101,24 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             )
         await event.answer([result] if result else None)
         
-    @tgbot.on(events.InlineQuery(data=compile(b"pmclick")))
+    @tgbot.on(
+        events.callbackquery.CallbackQuery(  # pylint:disable=E0602
+            data=re.compile(b"pmclick\((.+?)\)")
+        )
+    )
     async def on_pm_click(event):
         if event.query.user_id == bot.uid:
             reply_pop_up_alert = "This is for Other Users..."
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
         else:
             await event.edit(
-                f"🔰 This is ΣIVΛBθƬ PM Security for {Eiva_mention} to keep away unwanted retards from spamming PM..."
+                f"🔰 This is Andencento PM Security for {Eiva_mention} to keep away unwanted retards from spamming PM..."
             )
-
-    @tgbot.on(events.InlineQuery(data=compile(b"req")))
+    @tgbot.on(
+        events.callbackquery.CallbackQuery(  # pylint:disable=E0602
+            data=re.compile(b"reg\((.+?)\)")
+        )
+    )
     async def on_pm_click(event):
         if event.query.user_id == bot.uid:
             reply_pop_up_alert = "This is for other users!"
@@ -128,8 +135,11 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             tosend = f"**👀 Hey {Eiva_mention} !!** \n\n⚜️ You Got A Request From [{first_name}](tg://user?id={ok}) In PM!!"
             await bot.send_message(LOG_GP, tosend)
 
-
-    @tgbot.on(events.InlineQuery(data=compile(b"chat")))
+    @tgbot.on(
+        events.callbackquery.CallbackQuery(  # pylint:disable=E0602
+            data=re.compile(b"chat\((.+?)\)")
+        )
+    )
     async def on_pm_click(event):
         event.query.user_id
         if event.query.user_id == bot.uid:
@@ -147,8 +157,11 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             tosend = f"**👀 Hey {Eiva_mention} !!** \n\n⚜️ You Got A PM from  [{first_name}](tg://user?id={ok})  for random chats!!"
             await bot.send_message(LOG_GP, tosend)
 
-
-    @tgbot.on(events.InlineQuery(data=compile(b"heheboi")))
+    @tgbot.on(
+        events.callbackquery.CallbackQuery(  # pylint:disable=E0602
+            data=re.compile(b"heheboi\((.+?)\)")
+        )
+    )
     async def on_pm_click(event):
         if event.query.user_id == bot.uid:
             reply_pop_up_alert = "This is for other users!"
