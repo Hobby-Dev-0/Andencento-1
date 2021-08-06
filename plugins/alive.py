@@ -30,7 +30,7 @@ btn += [custom.Button.inline("<<String Session>>", data = "stling")]
 btn += [Button.url("<<Repo>>", "https://github.com/Andencento/Andencento")]
 
 
-@asst.on(events.NewMessage(outgoing=True, pattern=(".alive")))
+@asst.on(events.NewMessage(pattern=("/alive")))
 async def _(event):
     await event.get_chat()
     await event.delete()
