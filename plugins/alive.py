@@ -31,7 +31,7 @@ btn += [Button.url("Repo", "https://github.com/Andencento/Andencento")]
 async def _(event):
     await event.get_chat()
     await event.delete()
-    await Andencento.send_file(event.chat_id, PM_IMG, caption=pm_caption, buttons=btn)
+    await Andencento.send_file(event.chat_id, PM_IMG, buttons=btn ,caption=pm_caption)
 
 
 
