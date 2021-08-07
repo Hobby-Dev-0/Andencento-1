@@ -66,7 +66,7 @@ async def start(event):
             buttons=[
                 [
                     custom.Button.url(
-                        "Dᴇᴘʟᴏʏ Yᴏᴜʀ Oᴡɴ Andencento",
+                        "Dᴇᴘʟᴏʏ Yᴏᴜʀ Oᴡɴ Aɴᴅᴇɴᴄᴇɴᴛᴏ",
                         "https://github.com/Andencento/Andencento",
                     )
                 ],
