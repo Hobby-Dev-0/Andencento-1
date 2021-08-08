@@ -39,7 +39,7 @@
 
 
 # VC BOT
-## Speical Note
+## Special Note
 ###### Make Sure The Bot And The User Which Will Play Music Both Should Be Admin In Group or User Should be in group mandatory
 
 # Requirements
