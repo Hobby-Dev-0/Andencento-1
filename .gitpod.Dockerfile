@@ -1,4 +1,4 @@
-FROM python:latest #Published 
+FROM python:latest
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install -y ffmpeg python3-pip opus-tools
 RUN git clone https://github.com/Andencento/Andencento.git /root/Andencento
