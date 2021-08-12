@@ -16,12 +16,10 @@ jobs:
         run: |
           autopep8 --verbose --in-place --recursive --aggressive --aggressive assistant/*
           autopep8 --verbose --in-place --recursive --aggressive --aggressive plugins/*
-          autopep8 --verbose --in-place --recursive --aggressive --aggressive vcbot/*
       - name: Remove unused imports and variables
         run: |
           autoflake --in-place --recursive --remove-all-unused-imports --remove-unused-variables --ignore-init-module-imports assistant/*
           autoflake --in-place --recursive --remove-all-unused-imports --remove-unused-variables --ignore-init-module-imports plugins/*
-          autoflake --in-place --recursive --remove-all-unused-imports --remove-unused-variables --ignore-init-module-imports vcbot/*
       - name: lint with isort and black
         run: |
           isort assistant/*
