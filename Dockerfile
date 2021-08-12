@@ -4,6 +4,7 @@ FROM kalilinux/kali-rolling
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt upgrade -y && apt-get install sudo -y
+RUN apt-get install -y ffmpeg python3-pip
 
 RUN apt-get install -y\
     coreutils \
