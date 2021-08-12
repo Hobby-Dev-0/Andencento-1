@@ -1,4 +1,4 @@
-# by uniborg...Thanks @spechide 
+# by uniborg...Thanks @spechide
 # Now will be used in LEGENDBOT too....
 """Syntax: .afk REASON"""
 import asyncio
@@ -7,7 +7,6 @@ from datetime import datetime
 
 from telethon import events
 from telethon.tl import functions, types
-
 from userbot import CMD_HELP
 from userbot.utils import andencento_cmd
 

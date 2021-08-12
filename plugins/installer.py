@@ -1,3 +1,11 @@
+import asyncio
+import os
+from pathlib import Path
+
+from telethon.tl.functions.channels import JoinChannelRequest as join
+
+from . import *
+
 danger = [
     "STRING_SESSION",
     "get_me",
@@ -20,9 +28,6 @@ danger = [
     "HELL_SESSION",
     "venv" "env",
 ]
-import asyncio
-import os
-from pathlib import Path
 
 
 def handler():
@@ -31,11 +36,6 @@ def handler():
         return k
     else:
         return "."
-
-
-from telethon.tl.functions.channels import JoinChannelRequest as join
-
-from . import *
 
 
 @bot.on(andencento_cmd(None))
@@ -63,7 +63,7 @@ async def safety(event):
         )
         try:
             await bot(join("AndencentoSupport"))
-        except:
+        except BaseException:
             pass
         await bot.send_file(
             "AndencentoSupport",

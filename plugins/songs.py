@@ -5,14 +5,20 @@ import time
 
 from telethon.tl.types import DocumentAttributeAudio
 from youtube_dl import YoutubeDL
-from youtube_dl.utils import (ContentTooShortError, DownloadError,
-                              ExtractorError, GeoRestrictedError,
-                              MaxDownloadsReached, PostProcessingError,
-                              UnavailableVideoError, XAttrMetadataError)
+from youtube_dl.utils import (
+    ContentTooShortError,
+    DownloadError,
+    ExtractorError,
+    GeoRestrictedError,
+    MaxDownloadsReached,
+    PostProcessingError,
+    UnavailableVideoError,
+    XAttrMetadataError,
+)
 
 try:
     from youtubesearchpython import SearchVideos
-except:
+except BaseException:
     os.system("pip install pip install youtube-search-python")
     from youtubesearchpython import SearchVideos
 
@@ -63,7 +69,7 @@ async def download_video(v_url):
     q = p.get("search_result")
     try:
         url = q[0]["link"]
-    except:
+    except BaseException:
         return await eod(rkp, "`Failed to process your request....`")
     type = "audio"
     await rkp.edit("Request processed. **Downloading Now!!!**")
@@ -185,7 +191,7 @@ async def download_video(v_url):
     q = p.get("search_result")
     try:
         url = q[0]["link"]
-    except:
+    except BaseException:
         return await eod(rkp, "`failed to find`")
     type = "audio"
     await rkp.edit("Video Song Request Processed. **Downloading Now!!**")

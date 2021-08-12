@@ -12,13 +12,6 @@ DEL_TIME_OUT = 60
 
 BIO_MSG = Config.BIO_MSG
 
-import asyncio
-import time
-
-from telethon.errors import FloodWaitError
-from telethon.tl import functions
-
-from . import *
 
 DEFAULTUSERBIO = str(BIO_MSG) if BIO_MSG else "ᴛʜᴇ ᴜʟᴛɪᴍᴀᴛᴇ ᴀɴᴅᴇɴᴄᴇɴᴛᴏ ᴜꜱᴇʀʙᴏᴛ"
 DEL_TIME_OUT = 60

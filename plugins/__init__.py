@@ -1,15 +1,20 @@
+import os
+
 from telethon import version
-from telethon.errors.rpcerrorlist import (MediaEmptyError,
-                                          WebpageCurlFailedError,
-                                          WebpageMediaEmptyError)
+from telethon.errors.rpcerrorlist import (
+    MediaEmptyError,
+    WebpageCurlFailedError,
+    WebpageMediaEmptyError,
+)
 from telethon.events import CallbackQuery
 from userbot import *
+from userbot import CMD_HELP, CMD_HELP_BOT
 from userbot.config import Config
 from userbot.helpers import *
 from userbot.random_strings import *
 from userbot.utils import *
 from userbot.var import Config, Var
-from userbot.config import Config
+
 bot = Andencento
 uptime = "dekhna jaruri hai kya"
 
@@ -56,15 +61,12 @@ START_TIME = datetime.datetime.now()
 
 HANDLER = os.environ.get("HANDLER", ".")
 
-import os
-
-from userbot import CMD_HELP, CMD_HELP_BOT
 
 chnl_link = "https://t.me/Andencento"
 
 COMMAND_HAND_LER = os.environ.get("HANDLER", ".")
 
-#################################################################################################################
+##########################################################################
 
 
 class CmdHelp:
@@ -85,7 +87,7 @@ class CmdHelp:
         self.FILE = file
         self.ORIGINAL_FILE = file
         self.IS_OFFICIAL = official
-        self.FILE_NAME = file_name if not file_name == None else file + ".py"
+        self.FILE_NAME = file_name if file_name is not None else file + ".py"
         self.COMMANDS = {}
         self.FILE_AUTHOR = ""
         self.WARNING = ""
@@ -140,14 +142,14 @@ class CmdHelp:
 
         for command in self.COMMANDS:
             command = self.COMMANDS[command]
-            if command["params"] == None:
+            if command["params"] is None:
                 result += (
                     f"**🛠 Command :** `{COMMAND_HAND_LER[:1]}{command['command']}`\n"
                 )
             else:
                 result += f"**🛠 Command :** `{COMMAND_HAND_LER[:1]}{command['command']} {command['params']}`\n"
 
-            if command["example"] == None:
+            if command["example"] is None:
                 result += f"**💬 Details :** `{command['usage']}`\n\n"
             else:
                 result += f"**💬 Details :** `{command['usage']}`\n"
@@ -192,6 +194,8 @@ KANGING_STR = [
     "Hey! That's my sticker. Lemme get it back...",
     "Turn around, Go straight and f*ck off...",
 ]
+
+
 async def bash(cmd):
     process = await asyncio.create_subprocess_shell(
         cmd,

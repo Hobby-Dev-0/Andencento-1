@@ -1,16 +1,24 @@
 from asyncio import sleep
 
-from telethon.errors import (BadRequestError, ImageProcessFailedError,
-                             PhotoCropSizeSmallError)
-from telethon.errors.rpcerrorlist import (UserAdminInvalidError,
-                                          UserIdInvalidError)
-from telethon.tl.functions.channels import (EditAdminRequest,
-                                            EditBannedRequest,
-                                            EditPhotoRequest)
+from telethon.errors import (
+    BadRequestError,
+    ImageProcessFailedError,
+    PhotoCropSizeSmallError,
+)
+from telethon.errors.rpcerrorlist import UserAdminInvalidError, UserIdInvalidError
+from telethon.tl.functions.channels import (
+    EditAdminRequest,
+    EditBannedRequest,
+    EditPhotoRequest,
+)
 from telethon.tl.functions.messages import UpdatePinnedMessageRequest
 from telethon.tl.functions.users import GetFullUserRequest
-from telethon.tl.types import (ChatAdminRights, ChatBannedRights,
-                               MessageEntityMentionName, MessageMediaPhoto)
+from telethon.tl.types import (
+    ChatAdminRights,
+    ChatBannedRights,
+    MessageEntityMentionName,
+    MessageMediaPhoto,
+)
 
 from sql.mute_sql import is_muted, mute, unmute
 
@@ -434,7 +442,7 @@ async def pin(msg):
     await sleep(3)
     try:
         await hmm.delete()
-    except:
+    except BaseException:
         pass
 
 
@@ -552,7 +560,7 @@ async def _(event):
         await sleep(3)
         try:
             await event.delete()
-        except:
+        except BaseException:
             pass
 
 

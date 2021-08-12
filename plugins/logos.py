@@ -2,8 +2,7 @@ import os
 import random
 
 from PIL import Image, ImageDraw, ImageFont
-from telethon.tl.types import (InputMessagesFilterDocument,
-                               InputMessagesFilterPhotos)
+from telethon.tl.types import InputMessagesFilterDocument, InputMessagesFilterPhotos
 
 from . import *
 
@@ -68,7 +67,7 @@ async def lg1(userevent):
         os.remove(file_name)
         os.remove(fnt)
         os.remove(logo_)
-    except:
+    except BaseException:
         pass
 
 

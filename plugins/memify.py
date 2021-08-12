@@ -1,12 +1,12 @@
 # For The-TG-Bot-3.0
 # By Priyam Kalra
-# Parts of the code below is taken from other sources, the links to the sources is commented above the taken code
+# Parts of the code below is taken from other sources, the links to the
+# sources is commented above the taken code
 
 import os
 import textwrap
 
 from PIL import Image, ImageDraw, ImageFont
-
 from userbot import CMD_HELP
 from userbot.utils import andencento_cmd
 from var import Var

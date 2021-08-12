@@ -46,7 +46,7 @@ async def nekobot(borg):
             )
         )[2:49]
         await borg.client(hell)
-    except:
+    except BaseException:
         pass
     text = deEmojify(text)
     borgfile = await trumptweet(text)
@@ -79,7 +79,7 @@ async def nekobot(borg):
             )
         )[2:49]
         await borg.client(hell)
-    except:
+    except BaseException:
         pass
     text = deEmojify(text)
     borgfile = await moditweet(text)
@@ -112,7 +112,7 @@ async def nekobot(borg):
             )
         )[2:49]
         await borg.client(hell)
-    except:
+    except BaseException:
         pass
     text = deEmojify(text)
     borgfile = await miatweet(text)
@@ -146,7 +146,7 @@ async def nekobot(borg):
             )
         )[2:49]
         await borg.client(hell)
-    except:
+    except BaseException:
         pass
     text = deEmojify(text)
     borgfile = await papputweet(text)
@@ -180,7 +180,7 @@ async def nekobot(borg):
             )
         )[2:49]
         await borg.client(hell)
-    except:
+    except BaseException:
         pass
     text = deEmojify(text)
     borgfile = await sunnytweet(text)
@@ -214,7 +214,7 @@ async def nekobot(borg):
             )
         )[2:49]
         await borg.client(hell)
-    except:
+    except BaseException:
         pass
     text = deEmojify(text)
     borgfile = await sinstweet(text)
@@ -247,7 +247,7 @@ async def nekobot(borg):
             )
         )[2:49]
         await borg.client(hell)
-    except:
+    except BaseException:
         pass
     text = deEmojify(text)
     borgfile = await taklatweet(text)
@@ -281,7 +281,7 @@ async def nekobot(borg):
             )
         )[2:49]
         await borg.client(hell)
-    except:
+    except BaseException:
         pass
     text = deEmojify(text)
     borgfile = await changemymind(text)
@@ -315,7 +315,7 @@ async def nekobot(borg):
             )
         )[2:49]
         await borg.client(hell)
-    except:
+    except BaseException:
         pass
     text = deEmojify(text)
     borgfile = await kannagen(text)

@@ -4,8 +4,12 @@ import re
 from telethon import utils
 from telethon.tl import types
 
-from sql.filter_sql import (add_filter, get_all_filters,
-                                    remove_all_filters, remove_filter)
+from sql.filter_sql import (
+    add_filter,
+    get_all_filters,
+    remove_all_filters,
+    remove_filter,
+)
 
 from . import *
 

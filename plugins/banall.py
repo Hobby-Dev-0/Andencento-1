@@ -3,11 +3,17 @@ from time import sleep
 
 from telethon.tl import functions
 from telethon.tl.functions.channels import EditBannedRequest
-from telethon.tl.types import (ChannelParticipantsAdmins,
-                               ChannelParticipantsKicked, ChatBannedRights,
-                               UserStatusEmpty, UserStatusLastMonth,
-                               UserStatusLastWeek, UserStatusOffline,
-                               UserStatusOnline, UserStatusRecently)
+from telethon.tl.types import (
+    ChannelParticipantsAdmins,
+    ChannelParticipantsKicked,
+    ChatBannedRights,
+    UserStatusEmpty,
+    UserStatusLastMonth,
+    UserStatusLastWeek,
+    UserStatusOffline,
+    UserStatusOnline,
+    UserStatusRecently,
+)
 
 from . import *
 
@@ -23,13 +29,15 @@ BANNED_RIGHTS = ChatBannedRights(
     embed_links=True,
 )
 
+
 @Andencento.on(sudo_cmd(pattern=r"kickall ?(.*)", allow_sudo=True))
 @Andencento.on(sudo_cmd(pattern=r"banall ?(.*)", allow_sudo=True))
 @Andencento.on(sudo_cmd(pattern=r"unbanall ?(.*)", allow_sudo=True))
 @Andencento.on(sudo_cmd(pattern="ikuck ?(.*)", allow_sudo=True))
 async def _(event):
-  Andencento.send_message(event, "Sudo Restricted Command Sur!!")
- 
+    Andencento.send_message(event, "Sudo Restricted Command Sur!!")
+
+
 @Andencento.on(andencento_cmd(pattern=r"kickall ?(.*)"))
 async def _(event):
     result = await event.client(

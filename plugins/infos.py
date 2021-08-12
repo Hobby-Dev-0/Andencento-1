@@ -4,22 +4,25 @@ from math import sqrt
 from os import remove
 
 from telethon import events
-from telethon.errors import (ChannelInvalidError, ChannelPrivateError,
-                             ChannelPublicGroupNaError, ChatAdminRequiredError)
-from telethon.errors.rpcerrorlist import (MessageTooLongError,
-                                          YouBlockedUserError)
-from telethon.tl.functions.channels import (GetFullChannelRequest,
-                                            GetParticipantsRequest)
-from telethon.tl.functions.messages import (GetFullChatRequest,
-                                            GetHistoryRequest)
+from telethon.errors import (
+    ChannelInvalidError,
+    ChannelPrivateError,
+    ChannelPublicGroupNaError,
+    ChatAdminRequiredError,
+)
+from telethon.errors.rpcerrorlist import MessageTooLongError, YouBlockedUserError
+from telethon.tl.functions.channels import GetFullChannelRequest, GetParticipantsRequest
+from telethon.tl.functions.messages import GetFullChatRequest, GetHistoryRequest
 from telethon.tl.functions.photos import GetUserPhotosRequest
 from telethon.tl.functions.users import GetFullUserRequest
-from telethon.tl.types import (ChannelParticipantAdmin,
-                               ChannelParticipantCreator,
-                               ChannelParticipantsAdmins,
-                               ChannelParticipantsBots,
-                               MessageActionChannelMigrateFrom,
-                               MessageEntityMentionName)
+from telethon.tl.types import (
+    ChannelParticipantAdmin,
+    ChannelParticipantCreator,
+    ChannelParticipantsAdmins,
+    ChannelParticipantsBots,
+    MessageActionChannelMigrateFrom,
+    MessageEntityMentionName,
+)
 from telethon.utils import get_input_location, pack_bot_file_id
 
 from . import *
@@ -233,7 +236,7 @@ async def get_chatinfo(event):
             chat = event.chat_id
     try:
         chat_info = await event.client(GetFullChatRequest(chat))
-    except:
+    except BaseException:
         try:
             chat_info = await event.client(GetFullChannelRequest(chat))
         except ChannelInvalidError:
@@ -301,7 +304,7 @@ async def fetch_info(chat, event):
     former_title = (
         msg_info.messages[0].action.title
         if first_msg_valid
-        and type(msg_info.messages[0].action) is MessageActionChannelMigrateFrom
+        and isinstance(msg_info.messages[0].action, MessageActionChannelMigrateFrom)
         and msg_info.messages[0].action.title != chat_title
         else None
     )
@@ -380,7 +383,8 @@ async def fetch_info(chat, event):
     # end of spaghetti block
 
     if admins is None:
-        # use this alternative way if chat.full_chat.admins_count is None, works even without being an admin
+        # use this alternative way if chat.full_chat.admins_count is None,
+        # works even without being an admin
         try:
             participants_admins = await event.client(
                 GetParticipantsRequest(

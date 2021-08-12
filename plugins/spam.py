@@ -58,7 +58,7 @@ async def tiny_pic_spam(e):
     await e.client.get_me()
     try:
         await e.delete()
-    except:
+    except BaseException:
         pass
     try:
         counter = int(e.pattern_match.group(1).split(" ", 1)[0])
@@ -73,7 +73,7 @@ async def tiny_pic_spam(e):
         message = reply_message.media
         for i in range(1, counter):
             await e.client.send_file(e.chat_id, message)
-    except:
+    except BaseException:
         return await e.reply(
             f"**Error**\nUsage `{hl}mspam <count> reply to a sticker/gif/photo/video`"
         )

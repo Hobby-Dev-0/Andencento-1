@@ -1,7 +1,6 @@
 from telethon import events
 
-from sql.welcome_sql import (add_welcome, get_current_welcome,
-                                     rm_welcome, update_welcome)
+from sql.welcome_sql import add_welcome, get_current_welcome, rm_welcome, update_welcome
 
 from . import *
 

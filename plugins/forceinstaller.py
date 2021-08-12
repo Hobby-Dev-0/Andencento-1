@@ -1,9 +1,9 @@
+import os
 from pathlib import Path
 
 from . import *
 
 DELETE_TIMEOUT = 5
-import os
 
 
 @Andencento.on(sudo_cmd(pattern=".install", allow_sudo=True))

@@ -12,7 +12,7 @@ async def get_media(event):
     dir = "./temp/"
     try:
         os.makedirs("./temp/")
-    except:
+    except BaseException:
         pass
     channel_username = event.text
     limit = channel_username[6:9]
@@ -43,7 +43,7 @@ async def get_media(event):
     dir = "./temp/"
     try:
         os.makedirs("./temp/")
-    except:
+    except BaseException:
         pass
     channel_username = event.text
     channel_username = channel_username[7:]

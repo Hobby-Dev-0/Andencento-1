@@ -25,6 +25,7 @@ async def restart(event):
     )
     await bash("pkill userbot && python3 -m userbot")
 
+
 @Andencento.on(andencento_cmd(pattern="restart$"))
 @Andencento.on(sudo_cmd(pattern="restart$", allow_sudo=True))
 async def re(user):
@@ -49,10 +50,12 @@ async def down(user):
 
 
 @Andencento.on(
-    andencento_cmd(pattern="(set|get|del) var(?: |$)(.*)(?: |$)([\s\S]*)", outgoing=True)
+    andencento_cmd(
+        pattern="(set|get|del) var(?: |$)(.*)(?: |$)([\\s\\S]*)", outgoing=True
+    )
 )
 @Andencento.on(
-    sudo_cmd(pattern="(set|get|del) var(?: |$)(.*)(?: |$)([\s\S]*)", allow_sudo=True)
+    sudo_cmd(pattern="(set|get|del) var(?: |$)(.*)(?: |$)([\\s\\S]*)", allow_sudo=True)
 )
 async def variable(user):
     if user.fwd_from:

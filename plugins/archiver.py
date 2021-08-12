@@ -152,7 +152,7 @@ async def _(event):
             try:
                 os.remove(directory_name + ".rar")
                 os.remove(directory_name)
-            except:
+            except BaseException:
                 pass
             await event.edit("Task Completed")
             await asyncio.sleep(3)
@@ -205,7 +205,7 @@ async def _(event):
             try:
                 os.remove(directory_name + ".7z")
                 os.remove(directory_name)
-            except:
+            except BaseException:
                 pass
             await event.edit("Task Completed")
             await asyncio.sleep(3)
@@ -258,7 +258,7 @@ async def _(event):
             try:
                 os.remove(output)
                 os.remove(output)
-            except:
+            except BaseException:
                 pass
             await event.edit("Task Completed")
             await asyncio.sleep(3)
@@ -299,7 +299,7 @@ async def create_archive(input_directory):
         if os.path.exists(compressed_file_name):
             try:
                 shutil.rmtree(input_directory)
-            except:
+            except BaseException:
                 pass
             return_name = compressed_file_name
     return return_name

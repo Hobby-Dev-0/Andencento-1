@@ -128,7 +128,9 @@ async def codename_info(request):
     await edit_or_reply(request, reply)
 
 
-@Andencento.on(andencento_cmd(outgoing=True, pattern=r"specs(?: |)([\S]*)(?: |)([\s\S]*)"))
+@Andencento.on(
+    andencento_cmd(outgoing=True, pattern=r"specs(?: |)([\S]*)(?: |)([\s\S]*)")
+)
 @Andencento.on(sudo_cmd(pattern=r"specs(?: |)([\S]*)(?: |)([\s\S]*)", allow_sudo=True))
 async def devices_specifications(request):
     if request.fwd_from:

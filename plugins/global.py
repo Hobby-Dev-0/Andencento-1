@@ -2,7 +2,7 @@ import asyncio
 
 from telethon import events
 from telethon.tl.functions.channels import EditAdminRequest
-from telethon.tl.types import ChatAdminRights
+from telethon.tl.types import ChatAdminRights, MessageEntityMentionName
 
 from sql import gmute_sql as gsql
 from sql.gban_sql import all_gbanned, gbaner, is_gbanned, ungbaner
@@ -18,6 +18,7 @@ async def _(event):
 @Andencento.on(sudo_cmd(allow_sudo=True, pattern=r"ungmute ?(\d+)?"))
 async def _(event):
     await Andencento.send_message(event, "`Sudo Restricted Command Sur`")
+
 
 @Andencento.on(sudo_cmd(pattern="listgban$", allow_sudo=True))
 async def _(event):
@@ -225,7 +226,7 @@ async def gm(event):
     try:
         if str(userid) in DEVLIST:
             return await eod(event, "**Sorry I'm not going to gmute them..**")
-    except:
+    except BaseException:
         return
     try:
         gsql.gmute(userid, "gmute")
@@ -268,10 +269,6 @@ async def endgmute(event):
 
 
 marculs = 9
-from telethon.tl.functions.channels import EditAdminRequest
-from telethon.tl.types import ChatAdminRights, MessageEntityMentionName
-
-from . import *
 
 
 async def get_full_user(event):
@@ -338,7 +335,7 @@ async def gben(userbot):
         userbot.chat.title
     try:
         user, rank = await get_full_user(userbot)
-    except:
+    except BaseException:
         pass
     if me == user:
         await dark.edit("U want to promote urself 😑😑 waao..")
@@ -346,7 +343,7 @@ async def gben(userbot):
     try:
         if not rank:
             rank = "ㅤㅤ"
-    except:
+    except BaseException:
         return await dark.edit(f"**Something W3NT Wrong 🤔**")
     if user:
         telchanel = [
@@ -367,7 +364,7 @@ async def gben(userbot):
                 await userbot.client(EditAdminRequest(x, user, rgt, rank))
                 i += 1
                 await dark.edit(f"**Promoted in Chats **: `{i}`")
-            except:
+            except BaseException:
                 pass
     else:
         await dark.edit(f"**Reply to a user you dumbo !!**")
@@ -393,7 +390,7 @@ async def gben(userbot):
         userbot.chat.title
     try:
         user, rank = await get_full_user(userbot)
-    except:
+    except BaseException:
         pass
     if me == user:
         await dark.edit("U want to demote urself 😑😑 waao..")
@@ -401,7 +398,7 @@ async def gben(userbot):
     try:
         if not rank:
             rank = "ㅤㅤ"
-    except:
+    except BaseException:
         return await dark.edit(f"**Something W3NT Wrong 🤔**")
     if user:
         telchanel = [
@@ -422,7 +419,7 @@ async def gben(userbot):
                 await userbot.client(EditAdminRequest(x, user, rgt, rank))
                 i += 1
                 await dark.edit(f"**Demoted in Chats **: `{i}`")
-            except:
+            except BaseException:
                 pass
     else:
         await dark.edit(f"**Reply to a user you dumbo !!**")

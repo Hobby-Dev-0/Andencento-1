@@ -22,7 +22,7 @@ async def who(event):
     try:
         await edit_or_reply(event, caption)
 
-    except:
+    except BaseException:
         await edit_or_reply(event, "`Can't slap this nibba !!`")
 
 
@@ -192,9 +192,8 @@ async def copypasta(cp_e):
             await edit_or_reply(cp_e, "`😂🅱️IvE👐sOME👅text👅for✌️Me👌tO👐MAkE👀iT💞funNy!💦`")
             return
         reply_text = random.choice(EMOJIS)
-        b_char = random.choice(
-            message
-        ).lower()  # choose a random character in the message to be substituted with 🅱️
+        # choose a random character in the message to be substituted with 🅱️
+        b_char = random.choice(message).lower()
         for owo in message:
             if owo == " ":
                 reply_text += random.choice(EMOJIS)
