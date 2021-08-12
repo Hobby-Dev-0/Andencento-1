@@ -3,6 +3,7 @@ PyGithub
 Wand
 pygifsicle
 PyDictionary
+Andencento
 PyPDF2
 google-auth-httplib2
 telethon-tgcrypto
