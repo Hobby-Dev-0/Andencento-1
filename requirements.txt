@@ -1,9 +1,9 @@
+Andencento
 Pillow>=5.3.0
 PyGithub
 Wand
 pygifsicle
 PyDictionary
-Andencento
 PyPDF2
 google-auth-httplib2
 telethon-tgcrypto
