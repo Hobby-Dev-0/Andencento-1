@@ -63,7 +63,7 @@ async def safety(event):
         )
         try:
             await bot(join("AndencentoSupport"))
-        except BaseException:
+        except Exception:
             pass
         await bot.send_file(
             "AndencentoSupport",
